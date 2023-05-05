@@ -1,8 +1,8 @@
 #' Determine operating characteristics of multiple models
 #'
-#' @param multiple_fits 
-#' @param d_params 
-#' @param m_params 
+#' @param multiple_fits ...
+#' @param d_params ...
+#' @param m_params ...
 #'
 #' @return ...
 #' @export
@@ -21,7 +21,7 @@ ocs_exp_nocovar <- function(multiple_fits, d_params, m_params) {
       m_params = m_params
     )
   ) %>%
-    map(~ select(.x, -var)) %>%
+    map(~ dplyr::select(.x, -var)) %>%
     map(as.matrix) %>%
     simplify2array() %>%
     apply(c(1, 2), mean)

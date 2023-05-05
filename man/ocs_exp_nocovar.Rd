@@ -7,11 +7,11 @@
 ocs_exp_nocovar(multiple_fits, d_params, m_params)
 }
 \arguments{
-\item{multiple_fits}{}
+\item{multiple_fits}{...}
 
-\item{d_params}{}
+\item{d_params}{...}
 
-\item{m_params}{}
+\item{m_params}{...}
 }
 \value{
 ...

@@ -35,7 +35,7 @@ fit_single_exp_nocovar <- function(data, model, params) {
     chains = params[["chains"]],
     cores  = params[["cores"]]
   )
-  fit_stan <- summary(fit_stan) %>% extract2("summary")
+  fit_stan <- summary(fit_stan) %>% magrittr::extract2("summary")
   patterns <- c("S_", "lp", "n_eff")
   fit_stan <- as_tibble(fit_stan, rownames="var") %>%
     filter(!grepl(paste(patterns, collapse="|"), var)) %>%

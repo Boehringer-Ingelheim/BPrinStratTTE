@@ -16,10 +16,10 @@ run_sim_exp_nocovar <- function(
   n_iter, d_params, fit_function, model, m_params
 ) {
   # Simulate data
-  d_mult <- sim_dat_mult_trials_nocovar(n_iter = n_iter, params = d_params)
+  d_mult <- sim_dat_mult_trials_exp_nocovar(n_iter = n_iter, params = d_params)
   # Run models
   multiple_fits <- fit_mult_exp_nocovar(
-    list_df = d_mult,
+    list_dat_mult_trials = d_mult,
     fit_function = fit_function,
     model = model,
     m_params = m_params

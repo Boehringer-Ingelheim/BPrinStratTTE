@@ -12,7 +12,7 @@
 sim_dat_mult_trials_exp_nocovar <- function(n_iter, params) {
   replicate(
     n_iter,
-    sim_one_trial_nocovar(
+    sim_dat_one_trial_exp_nocovar(
       n = params[["n"]],
       nt = params[["nt"]],
       prob_ice = params[["prob_ice"]],

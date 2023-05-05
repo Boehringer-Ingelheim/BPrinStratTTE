@@ -4,16 +4,24 @@
 \alias{fit_mult_exp_nocovar}
 \title{Fit multiple models without covariates}
 \usage{
-fit_mult_exp_nocovar(list_dfs, fit_function, model, m_params, seed = 23)
+fit_mult_exp_nocovar(
+  list_dat_mult_trials,
+  fit_function,
+  model,
+  m_params,
+  seed = 23
+)
 }
 \arguments{
-\item{list_dfs}{...}
+\item{list_dat_mult_trials}{...}
 
 \item{fit_function}{...}
 
 \item{model}{...}
 
 \item{m_params}{...}
+
+\item{seed}{...}
 }
 \value{
 ...

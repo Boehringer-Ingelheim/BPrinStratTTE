@@ -54,7 +54,7 @@ sim_dat_one_trial_exp_nocovar <- function(
   TIME <- as.integer(TIME)
   return(
     tibble(
-      PAT_ID = str_pad(1:n, nchar(n), pad = "0"),
+      PAT_ID = stringr::str_pad(1:n, nchar(n), pad = "0"),
       Z = Z,
       G = G,
       S = S,
