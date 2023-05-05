@@ -12,19 +12,9 @@ Bayesian principal stratification for time-to-event endpoints
 
 ## Installation
 
-You can install the development version of BPrinStratTTE from
-[GitHub](https://github.com/) with:
+You can install the `BPrinStratTTE` package from GitHub with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("chstock/BPrinStratTTE")
-```
-
-## Getting started
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-#library(BPrinStratTTE)
-## basic example code
+if (!require("remotes")) {install.packages("remotes")}
+remotes::install_github("chstock/BPrinStratTTE")
 ```
