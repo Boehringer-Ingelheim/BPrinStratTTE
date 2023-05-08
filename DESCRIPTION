@@ -27,15 +27,30 @@ BugReports: https://github.com/chstock/BPrinStratTTE/issues
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 Imports: 
+    DBI,
     dplyr,
-    purrr,
-    rstan,
-    StanHeaders,
     furrr,
     magrittr,
+    methods,
+    purrr,
+    Rcpp (>= 0.12.0),
+    RcppParallel (>= 5.0.1),
+    rstan (>= 2.18.1),
+    rstantools (>= 2.3.1),
+    StanHeaders,
     stats,
-    DBI,
-    tibble,
-    stringr
+    stringr,
+    tibble
 Suggests: 
     tictoc
+Biarch: true
+Depends: 
+    R (>= 3.4.0)
+LinkingTo: 
+    BH (>= 1.66.0),
+    Rcpp (>= 0.12.0),
+    RcppEigen (>= 0.3.3.3.0),
+    RcppParallel (>= 5.0.1),
+    rstan (>= 2.18.1),
+    StanHeaders (>= 2.18.0)
+SystemRequirements: GNU make
