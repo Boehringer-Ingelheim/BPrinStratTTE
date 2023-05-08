@@ -12,12 +12,12 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
 
-RcppExport SEXP _rcpp_module_boot_stan_fit4m_bprinstrat_exp_covar_mod();
-RcppExport SEXP _rcpp_module_boot_stan_fit4m_bprinstrat_exp_nocovar_mod();
+RcppExport SEXP _rcpp_module_boot_stan_fit4m_exp_covar_mod();
+RcppExport SEXP _rcpp_module_boot_stan_fit4m_exp_nocovar_mod();
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_rcpp_module_boot_stan_fit4m_bprinstrat_exp_covar_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4m_bprinstrat_exp_covar_mod, 0},
-    {"_rcpp_module_boot_stan_fit4m_bprinstrat_exp_nocovar_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4m_bprinstrat_exp_nocovar_mod, 0},
+    {"_rcpp_module_boot_stan_fit4m_exp_covar_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4m_exp_covar_mod, 0},
+    {"_rcpp_module_boot_stan_fit4m_exp_nocovar_mod", (DL_FUNC) &_rcpp_module_boot_stan_fit4m_exp_nocovar_mod, 0},
     {NULL, NULL, 0}
 };
 
