@@ -2,32 +2,12 @@
 % Please edit documentation in R/BPrinStratTTE-package.R
 \docType{package}
 \name{BPrinStratTTE-package}
-\alias{BPrinStratTTE}
 \alias{BPrinStratTTE-package}
-\title{BPrinStratTTE: Bayesian principal stratification for time-to-event endpoints}
+\alias{BPrinStratTTE}
+\title{The 'BPrinStratTTE' package.}
 \description{
-Functions to fit Bayesian principal stratification models for exponentially distributed time-to-event endpoints.
+A DESCRIPTION OF THE PACKAGE
 }
-\seealso{
-Useful links:
-\itemize{
-  \item \url{https://github.com/chstock/BPrinStratTTE}
-  \item Report bugs at \url{https://github.com/chstock/BPrinStratTTE/issues}
+\references{
+Stan Development Team (2022). RStan: the R interface to Stan. R package version 2.21.5. https://mc-stan.org
 }
-
-}
-\author{
-\strong{Maintainer}: Christian Stock \email{christian.stock@boehringer-ingelheim.com} (\href{https://orcid.org/0000-0002-3493-3234}{ORCID})
-
-Authors:
-\itemize{
-  \item Emma Torrini
-}
-
-Other contributors:
-\itemize{
-  \item Boehringer Ingelheim Pharma GmbH & Co. KG [copyright holder, funder]
-}
-
-}
-\keyword{internal}
