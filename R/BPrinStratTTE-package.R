@@ -21,6 +21,7 @@ NULL
 #' @importFrom stats runif
 #' @importFrom dplyr select
 #' @importFrom dplyr filter
+#' @importFrom dplyr mutate
 #' @importFrom purrr map
 #' @importFrom magrittr %>%
 #' @importFrom tibble as_tibble

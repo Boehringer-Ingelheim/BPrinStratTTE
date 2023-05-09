@@ -2,24 +2,14 @@
 % Please edit documentation in R/fit_mult_exp_nocovar.R
 \name{fit_mult_exp_nocovar}
 \alias{fit_mult_exp_nocovar}
-\title{Fit multiple models without covariates}
+\title{Fit multiple models without predictors of the intercurrent event}
 \usage{
-fit_mult_exp_nocovar(
-  list_dat_mult_trials,
-  fit_function,
-  model,
-  m_params,
-  seed = 23
-)
+fit_mult_exp_nocovar(dat_mult_trials, params, seed = 23)
 }
 \arguments{
-\item{list_dat_mult_trials}{...}
+\item{dat_mult_trials}{...}
 
-\item{fit_function}{...}
-
-\item{model}{...}
-
-\item{m_params}{...}
+\item{params}{...}
 
 \item{seed}{...}
 }
@@ -27,9 +17,41 @@ fit_mult_exp_nocovar(
 ...
 }
 \description{
-Fit multiple models without covariates
+Fit multiple models without predictors of the intercurrent event
 }
 \examples{
-print("...")
-
+d_params_nocovar <- list(
+  n = 500L,
+  nt = 250L,
+  prob_ice = 0.5,
+  fu_max = 336L,
+  T0T_rate = 0.2,
+  T0N_rate = 0.2,
+  T1T_rate = 0.15,
+  T1N_rate = 0.1
+)
+dat_mult_trials <- sim_dat_mult_trials_exp_nocovar(
+  n_iter = 2,
+  params = d_params_nocovar 
+)
+m_params_nocovar <- list(
+  tg = 48L,
+  prior_piT = c(0.5, 0.5),
+  prior_0N = c(1.5, 5),
+  prior_1N = c(1.5, 5),
+  prior_0T = c(1.5, 5),
+  prior_1T = c(1.5, 5),
+  t_grid =  seq(7, 7 * 48, 7) / 30,
+  chains = 2L,
+  n_iter = 3000L,
+  burnin = 1500L,
+  cores = 2L
+)
+fit_multiple <- fit_mult_exp_nocovar(
+  dat_mult_trials = dat_mult_trials,
+  params = m_params_nocovar,
+  seed = 12
+)
+lapply(fit_multiple, dim)
+head(fit_multiple[[1]])
 }

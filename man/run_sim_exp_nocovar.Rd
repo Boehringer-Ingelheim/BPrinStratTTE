@@ -4,18 +4,16 @@
 \alias{run_sim_exp_nocovar}
 \title{Run simulation of models without covariates}
 \usage{
-run_sim_exp_nocovar(n_iter, d_params, fit_function, model, m_params)
+run_sim_exp_nocovar(n_iter, d_params, m_params, seed)
 }
 \arguments{
 \item{n_iter}{...}
 
 \item{d_params}{...}
 
-\item{fit_function}{...}
-
-\item{model}{...}
-
 \item{m_params}{...}
+
+\item{seed}{...}
 }
 \value{
 ...
@@ -24,6 +22,34 @@ run_sim_exp_nocovar(n_iter, d_params, fit_function, model, m_params)
 Run simulation of models without covariates
 }
 \examples{
-print("...")
-
+d_params_nocovar <- list(
+  n = 500L,
+  nt = 250L,
+  prob_ice = 0.5,
+  fu_max = 336L,
+  T0T_rate = 0.2,
+  T0N_rate = 0.2,
+  T1T_rate = 0.15,
+  T1N_rate = 0.1
+)
+m_params_nocovar <- list(
+  tg = 48L,
+  prior_piT = c(0.5, 0.5),
+  prior_0N = c(1.5, 5),
+  prior_1N = c(1.5, 5),
+  prior_0T = c(1.5, 5),
+  prior_1T = c(1.5, 5),
+  t_grid =  seq(7, 7 * 48, 7) / 30,
+  chains = 2L,
+  n_iter = 3000L,
+  burnin = 1500L,
+  cores = 2L
+)
+list_ocs <- run_sim_exp_nocovar(
+  n_iter = 3, 
+  d_params = d_params_nocovar, 
+  m_params = m_params_nocovar, 
+  seed = 12
+  )
+print(list_ocs)
 }

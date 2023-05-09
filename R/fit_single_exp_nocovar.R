@@ -47,7 +47,6 @@
 #'   summarize_fit = TRUE
 #' )
 #' print(fit_single)
-#' 
 fit_single_exp_nocovar <- function(data, params, summarize_fit = TRUE) {
   # input data for model
   data_stan <- list(
@@ -82,8 +81,8 @@ fit_single_exp_nocovar <- function(data, params, summarize_fit = TRUE) {
   #  chains = params[["chains"]],
   #  cores  = params[["cores"]]
   #)
+  fit_stan <- fit_stan %>% rstan::summary() %>% magrittr::extract2("summary")
   if(isTRUE(summarize_fit)) {
-    fit_stan <- fit_stan %>% rstan::summary() %>% magrittr::extract2("summary")
     patterns <- c("S_", "lp", "n_eff")
     fit_stan <- tibble::as_tibble(fit_stan, rownames="var") %>%
       dplyr::filter(!grepl(paste(patterns, collapse="|"), var)) %>%

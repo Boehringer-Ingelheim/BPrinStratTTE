@@ -1,23 +1,55 @@
-#' Fit multiple models without covariates
+#' Fit multiple models without predictors of the intercurrent event
 #'
-#' @param list_dat_mult_trials ...
-#' @param fit_function ...
-#' @param model ...
-#' @param m_params ...
+#' @param dat_mult_trials ...
+#' @param params ...
 #' @param seed ...
 #'
 #' @return ...
 #' @export
 #'
 #' @examples
-#' print("...")
-#' 
-fit_mult_exp_nocovar <- function(list_dat_mult_trials, fit_function, model, m_params, seed=23) {
+#' d_params_nocovar <- list(
+#'   n = 500L,
+#'   nt = 250L,
+#'   prob_ice = 0.5,
+#'   fu_max = 336L,
+#'   T0T_rate = 0.2,
+#'   T0N_rate = 0.2,
+#'   T1T_rate = 0.15,
+#'   T1N_rate = 0.1
+#' )
+#' dat_mult_trials <- sim_dat_mult_trials_exp_nocovar(
+#'   n_iter = 2,
+#'   params = d_params_nocovar 
+#' )
+#' m_params_nocovar <- list(
+#'   tg = 48L,
+#'   prior_piT = c(0.5, 0.5),
+#'   prior_0N = c(1.5, 5),
+#'   prior_1N = c(1.5, 5),
+#'   prior_0T = c(1.5, 5),
+#'   prior_1T = c(1.5, 5),
+#'   t_grid =  seq(7, 7 * 48, 7) / 30,
+#'   chains = 2L,
+#'   n_iter = 3000L,
+#'   burnin = 1500L,
+#'   cores = 2L
+#' )
+#' fit_multiple <- fit_mult_exp_nocovar(
+#'   dat_mult_trials = dat_mult_trials,
+#'   params = m_params_nocovar,
+#'   seed = 12
+#' )
+#' lapply(fit_multiple, dim)
+#' head(fit_multiple[[1]])
+fit_mult_exp_nocovar <- function(
+    dat_mult_trials, 
+    params, 
+    seed = 23) {
   furrr::future_map(
-    .x = list_dat_mult_trials,
-    .f = fit_function,
-    model = model,
-    params = m_params,
+    .x = dat_mult_trials,
+    .f = fit_single_exp_nocovar,
+    params = params,
     .options = furrr::furrr_options(seed = seed)
   )
 }

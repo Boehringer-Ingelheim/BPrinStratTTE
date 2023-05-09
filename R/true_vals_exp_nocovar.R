@@ -1,30 +1,74 @@
-#' Summarize single fits of a model for an exponentially distributed endpoint without consideration of predictors of the intercurrent event
+#' Add true values for an exponentially distributed endpoint without consideration of predictors of the intercurrent event
 #'
 #' @param x ...
 #' @param d_params ...
 #' @param m_params ...
 #'
-#' @return ...
+#' @return A summary table
 #' @export
 #'
 #' @examples
-#' print("...")
+#' d_params_nocovar <- list(
+#'   n = 500L,
+#'   nt = 250L,
+#'   prob_ice = 0.5,
+#'   fu_max = 336L,
+#'   T0T_rate = 0.2,
+#'   T0N_rate = 0.2,
+#'   T1T_rate = 0.15,
+#'   T1N_rate = 0.1
+#' )
+#' dat_single_trial <- sim_dat_one_trial_exp_nocovar(
+#'   n = d_params_nocovar[["n"]], 
+#'   nt = d_params_nocovar[["nt"]],
+#'   prob_ice = d_params_nocovar[["prob_ice"]],
+#'   fu_max = d_params_nocovar[["fu_max"]],  
+#'   T0T_rate = d_params_nocovar[["T0T_rate"]],
+#'   T0N_rate = d_params_nocovar[["T0N_rate"]],
+#'   T1T_rate = d_params_nocovar[["T1T_rate"]],
+#'   T1N_rate = d_params_nocovar[["T1N_rate"]] 
+#' )
+#' m_params_nocovar <- list(
+#'   tg = 48L,
+#'   prior_piT = c(0.5, 0.5),
+#'   prior_0N = c(1.5, 5),
+#'   prior_1N = c(1.5, 5),
+#'   prior_0T = c(1.5, 5),
+#'   prior_1T = c(1.5, 5),
+#'   t_grid =  seq(7, 7 * 48, 7) / 30,
+#'   chains = 2L,
+#'   n_iter = 3000L,
+#'   burnin = 1500L,
+#'   cores = 2L
+#' )
+#' fit_single <- fit_single_exp_nocovar(
+#'   data = dat_single_trial,
+#'   params = m_params_nocovar,
+#'   summarize_fit = TRUE 
+#' )
+#' tab_obs_truth <- true_vals_exp_nocovar(
+#'   x = fit_single,
+#'   d_params = d_params_nocovar,
+#'   m_params = m_params_nocovar
+#' )
+#' print(tab_obs_truth)
 #' 
-summarize_fit_exp_nocovar <- function(x, d_params, m_params) {
+true_vals_exp_nocovar <- function(x, d_params, m_params) {
   # use model summary
   patterns <- c("S_", "lp", "n_eff")
-  y <- as_tibble(x) %>% filter(!grepl(paste(patterns, collapse="|"), var))
+  y <- tibble::as_tibble(x) %>% 
+    dplyr::filter(!grepl(paste(patterns, collapse="|"), var))
   # add new variables
-  y <- y %>% mutate(
+  y <- y %>% dplyr::mutate(
     true_val = NA, diff_mean = NA, diff_median = NA, 
     coverage = NA, int_excl1 = NA, int_excl0 = NA,
     rhat_check = NA) 
   # add true proportion of patients with ICE
-  y <- y %>% mutate(
+  y <- y %>% dplyr::mutate(
     true_val = ifelse(var=="pi_T", d_params[["prob_ice"]], true_val),
   )
   # add true hazard rate and hazard ratios
-  y <- y %>% mutate(
+  y <- y %>% dplyr::mutate(
     true_val = ifelse(var=="lambda_0N", d_params[["T0N_rate"]], true_val),
     true_val = ifelse(var=="lambda_1N", d_params[["T1N_rate"]], true_val),
     true_val = ifelse(var=="lambda_0T", d_params[["T0T_rate"]], true_val),
@@ -49,7 +93,7 @@ summarize_fit_exp_nocovar <- function(x, d_params, m_params) {
   }
   d_rmst_n <- rmst_1n - rmst_0n
   d_rmst_c <- rmst_1c - rmst_0c
-  y <- y %>% mutate(
+  y <- y %>% dplyr::mutate(
     true_val = ifelse(var=="rmst_N", d_rmst_n, true_val),
     true_val = ifelse(var=="rmst_T", d_rmst_c, true_val),
     true_val = ifelse(var=="rmst_0N", rmst_0n, true_val),
@@ -58,7 +102,7 @@ summarize_fit_exp_nocovar <- function(x, d_params, m_params) {
     true_val = ifelse(var=="rmst_1T", rmst_1c, true_val)
   )
   # add comparisons to true values and checks
-  y <- y %>% mutate(
+  y <- y %>% dplyr::mutate(
     diff_mean = mean - true_val,
     diff_median = `50%` - true_val,
     coverage = ifelse(true_val >=`2.5%` & true_val <= `97.5%`, 1, 0),
