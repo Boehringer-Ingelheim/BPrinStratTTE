@@ -4,14 +4,14 @@
 \alias{fit_single_exp_nocovar}
 \title{Fit Bayesian principal stratification model for an exponentially distributed endpoint without consideration of predictors of the intercurrent event}
 \usage{
-fit_single_exp_nocovar(data, model, params)
+fit_single_exp_nocovar(data, params, summarize_fit = TRUE)
 }
 \arguments{
 \item{data}{...}
 
-\item{model}{...}
-
 \item{params}{...}
+
+\item{summarize_fit}{...}
 }
 \value{
 ...
@@ -20,6 +20,44 @@ fit_single_exp_nocovar(data, model, params)
 Fit Bayesian principal stratification model for an exponentially distributed endpoint without consideration of predictors of the intercurrent event
 }
 \examples{
-print("...")
+d_params_nocovar <- list(
+  n = 500L,
+  nt = 250L,
+  prob_ice = 0.5,
+  fu_max = 336L,
+  T0T_rate = 0.2,
+  T0N_rate = 0.2,
+  T1T_rate = 0.15,
+  T1N_rate = 0.1
+)
+dat_single_trial <- sim_dat_one_trial_exp_nocovar(
+  n = d_params_nocovar[["n"]], 
+  nt = d_params_nocovar[["nt"]],
+  prob_ice = d_params_nocovar[["prob_ice"]],
+  fu_max = d_params_nocovar[["fu_max"]],  
+  T0T_rate = d_params_nocovar[["T0T_rate"]],
+  T0N_rate = d_params_nocovar[["T0N_rate"]],
+  T1T_rate = d_params_nocovar[["T1T_rate"]],
+  T1N_rate = d_params_nocovar[["T1N_rate"]] 
+)
+m_params_nocovar <- list(
+  tg = 48L,
+  prior_piT = c(0.5, 0.5),
+  prior_0N = c(0.01, 0.01),
+  prior_1N = c(0.01, 0.01),
+  prior_0T = c(0.01, 0.01),
+  prior_1T = c(0.01, 0.01),
+  t_grid =  seq(7, 7 * 48, 7) / 30,
+  chains = 2L,
+  n_iter = 3000L,
+  burnin = 1500L,
+  cores = 2L
+)
+fit_single <- fit_single_exp_nocovar(
+  data = dat_single_trial,
+  params = m_params_nocovar,
+  summarize_fit = TRUE
+)
+print(fit_single)
 
 }

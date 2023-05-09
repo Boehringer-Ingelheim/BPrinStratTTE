@@ -49,7 +49,7 @@ d_params_nocovar <- list(
   T1T_rate = 0.15,
   T1N_rate = 0.1
 )
-dat <- sim_dat_one_trial_exp_nocovar(
+dat_single_trial <- sim_dat_one_trial_exp_nocovar(
   n = d_params_nocovar[["n"]], 
   nt = d_params_nocovar[["nt"]],
   prob_ice = d_params_nocovar[["prob_ice"]],
@@ -59,7 +59,7 @@ dat <- sim_dat_one_trial_exp_nocovar(
   T1T_rate = d_params_nocovar[["T1T_rate"]],
   T1N_rate = d_params_nocovar[["T1N_rate"]] 
 )
-dim(dat)
-head(dat)
+dim(dat_single_trial)
+head(dat_single_trial)
 
 }

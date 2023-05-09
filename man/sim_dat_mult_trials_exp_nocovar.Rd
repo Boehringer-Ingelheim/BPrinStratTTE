@@ -12,12 +12,27 @@ sim_dat_mult_trials_exp_nocovar(n_iter, params)
 \item{params}{...}
 }
 \value{
-...
+A list of tibble containing trial data.
 }
 \description{
 Simulate data from multiple 2-arm trials without predictors of intercurrent events
 }
 \examples{
-print("...")
+d_params_nocovar <- list(
+  n = 500L,
+  nt = 250L,
+  prob_ice = 0.5,
+  fu_max = 336L,
+  T0T_rate = 0.2,
+  T0N_rate = 0.2,
+  T1T_rate = 0.15,
+  T1N_rate = 0.1
+)
+dat_mult_trials <- sim_dat_mult_trials_exp_nocovar(
+  n_iter = 3,
+  params = d_params_nocovar 
+)
+lapply(dat_mult_trials, dim)
+head(dat_mult_trials[[1]]) 
 
 }
