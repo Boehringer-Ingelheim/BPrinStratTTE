@@ -3,11 +3,26 @@
 #' @param n_iter ...
 #' @param params ...
 #'
-#' @return ...
+#' @return A list of tibble containing trial data.
 #' @export
 #'
 #' @examples
-#' print("...")
+#' d_params_nocovar <- list(
+#'   n = 500L,
+#'   nt = 250L,
+#'   prob_ice = 0.5,
+#'   fu_max = 336L,
+#'   T0T_rate = 0.2,
+#'   T0N_rate = 0.2,
+#'   T1T_rate = 0.15,
+#'   T1N_rate = 0.1
+#' )
+#' dat_mult_trials <- sim_dat_mult_trials_exp_nocovar(
+#'   n_iter = 3,
+#'   params = d_params_nocovar 
+#' )
+#' lapply(dat_mult_trials, dim)
+#' head(dat_mult_trials[[1]]) 
 #' 
 sim_dat_mult_trials_exp_nocovar <- function(n_iter, params) {
   replicate(

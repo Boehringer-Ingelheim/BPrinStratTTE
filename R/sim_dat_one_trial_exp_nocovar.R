@@ -13,7 +13,29 @@
 #' @export
 #'
 #' @examples
-#' print("...")
+#' d_params_nocovar <- list(
+#'   n = 500L,
+#'   nt = 250L,
+#'   prob_ice = 0.5,
+#'   fu_max = 336L,
+#'   T0T_rate = 0.2,
+#'   T0N_rate = 0.2,
+#'   T1T_rate = 0.15,
+#'   T1N_rate = 0.1
+#' )
+#' dat_single_trial <- sim_dat_one_trial_exp_nocovar(
+#'   n = d_params_nocovar[["n"]], 
+#'   nt = d_params_nocovar[["nt"]],
+#'   prob_ice = d_params_nocovar[["prob_ice"]],
+#'   fu_max = d_params_nocovar[["fu_max"]],  
+#'   T0T_rate = d_params_nocovar[["T0T_rate"]],
+#'   T0N_rate = d_params_nocovar[["T0N_rate"]],
+#'   T1T_rate = d_params_nocovar[["T1T_rate"]],
+#'   T1N_rate = d_params_nocovar[["T1N_rate"]] 
+#' )
+#' dim(dat_single_trial)
+#' head(dat_single_trial)
+#' 
 sim_dat_one_trial_exp_nocovar <- function(
   n,             # number of patients
   nt,            # number of treated patients
@@ -53,7 +75,7 @@ sim_dat_one_trial_exp_nocovar <- function(
   TIME[EVENT==1 & Z==1 & G==1] <- round(T1T[EVENT==1 & Z==1 & G==1])
   TIME <- as.integer(TIME)
   return(
-    tibble(
+    tibble::tibble(
       PAT_ID = stringr::str_pad(1:n, nchar(n), pad = "0"),
       Z = Z,
       G = G,

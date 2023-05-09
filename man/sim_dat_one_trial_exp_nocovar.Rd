@@ -39,5 +39,27 @@ A \code{tibble()}containing an analysis dataset
 Simulate data from a single 2-arm trial without predictors of intercurrent events
 }
 \examples{
-print("...")
+d_params_nocovar <- list(
+  n = 500L,
+  nt = 250L,
+  prob_ice = 0.5,
+  fu_max = 336L,
+  T0T_rate = 0.2,
+  T0N_rate = 0.2,
+  T1T_rate = 0.15,
+  T1N_rate = 0.1
+)
+dat <- sim_dat_one_trial_exp_nocovar(
+  n = d_params_nocovar[["n"]], 
+  nt = d_params_nocovar[["nt"]],
+  prob_ice = d_params_nocovar[["prob_ice"]],
+  fu_max = d_params_nocovar[["fu_max"]],  
+  T0T_rate = d_params_nocovar[["T0T_rate"]],
+  T0N_rate = d_params_nocovar[["T0N_rate"]],
+  T1T_rate = d_params_nocovar[["T1T_rate"]],
+  T1N_rate = d_params_nocovar[["T1N_rate"]] 
+)
+dim(dat)
+head(dat)
+
 }
