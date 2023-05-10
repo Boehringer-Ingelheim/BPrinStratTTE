@@ -20,7 +20,6 @@ ocs_exp_nocovar(multiple_fits, d_params, m_params)
 Determine operating characteristics of multiple models
 }
 \examples{
-\dontrun{
 d_params_nocovar <- list(
   n = 500L,
   nt = 250L,
@@ -48,6 +47,7 @@ m_params_nocovar <- list(
   burnin = 1500L,
   cores = 2L
 )
+\dontrun{
 fit_multiple <- fit_mult_exp_nocovar(
   dat_mult_trials = dat_mult_trials,
   params = m_params_nocovar,

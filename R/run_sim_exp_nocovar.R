@@ -9,7 +9,6 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' d_params_nocovar <- list(
 #'   n = 500L,
 #'   nt = 250L,
@@ -33,13 +32,14 @@
 #'   burnin = 1500L,
 #'   cores = 2L
 #' )
-#' list_ocs <- run_sim_exp_nocovar(
+#' \dontrun{ 
+#' dat_ocs <- run_sim_exp_nocovar(
 #'   n_iter = 3, 
 #'   d_params = d_params_nocovar, 
 #'   m_params = m_params_nocovar, 
 #'   seed = 12
 #'   )
-#' print(list_ocs)
+#' print(dat_ocs)
 #' }
 run_sim_exp_nocovar <- function(
   n_iter, d_params, m_params, seed

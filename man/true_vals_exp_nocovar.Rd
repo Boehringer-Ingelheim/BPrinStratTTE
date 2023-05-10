@@ -20,7 +20,6 @@ A summary table
 Add true values for an exponentially distributed endpoint without consideration of predictors of the intercurrent event
 }
 \examples{
-\dontrun{
 d_params_nocovar <- list(
   n = 500L,
   nt = 250L,
@@ -54,6 +53,7 @@ m_params_nocovar <- list(
   burnin = 1500L,
   cores = 2L
 )
+\dontrun{
 fit_single <- fit_single_exp_nocovar(
   data = dat_single_trial,
   params = m_params_nocovar,

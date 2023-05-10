@@ -8,7 +8,6 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' d_params_nocovar <- list(
 #'   n = 500L,
 #'   nt = 250L,
@@ -42,6 +41,7 @@
 #'   burnin = 1500L,
 #'   cores = 2L
 #' )
+#' \dontrun{
 #' fit_single <- fit_single_exp_nocovar(
 #'   data = dat_single_trial,
 #'   params = m_params_nocovar,
