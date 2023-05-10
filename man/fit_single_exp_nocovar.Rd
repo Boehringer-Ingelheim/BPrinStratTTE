@@ -52,7 +52,9 @@ m_params_nocovar <- list(
   chains = 2L,
   n_iter = 3000L,
   burnin = 1500L,
-  cores = 2L
+  cores = 2L,
+  open_progress = TRUE,
+  show_messages = TRUE
 )
 fit_single <- fit_single_exp_nocovar(
   data = dat_single_trial,

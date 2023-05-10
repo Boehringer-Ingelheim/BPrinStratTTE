@@ -59,7 +59,9 @@ m_params_covar <- list(
   chains = 2,
   n_iter = 3000,
   burnin = 1500,
-  cores = 2 
+  cores = 2,
+  open_progress = TRUE,
+  show_messages = TRUE   
 )
 fit_single <- fit_single_exp_covar(
   data = dat_single_trial,

@@ -20,7 +20,6 @@ fit_mult_exp_nocovar(dat_mult_trials, params, seed = 23)
 Fit multiple models without predictors of the intercurrent event
 }
 \examples{
-\dontrun{
 d_params_nocovar <- list(
   n = 500L,
   nt = 250L,
@@ -46,8 +45,11 @@ m_params_nocovar <- list(
   chains = 2L,
   n_iter = 3000L,
   burnin = 1500L,
-  cores = 2L
+  cores = 2L,
+  open_progress = TRUE,
+  show_messages = TRUE
 )
+\dontrun{
 fit_multiple <- fit_mult_exp_nocovar(
   dat_mult_trials = dat_mult_trials,
   params = m_params_nocovar,

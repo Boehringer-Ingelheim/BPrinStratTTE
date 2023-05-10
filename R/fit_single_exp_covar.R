@@ -47,7 +47,9 @@
 #'   chains = 2,
 #'   n_iter = 3000,
 #'   burnin = 1500,
-#'   cores = 2 
+#'   cores = 2,
+#'   open_progress = TRUE,
+#'   show_messages = TRUE   
 #' )
 #' fit_single <- fit_single_exp_covar(
 #'   data = dat_single_trial,
@@ -84,7 +86,9 @@ fit_single_exp_covar <- function(data, params, summarize_fit = TRUE) {
     iter   = params[["n_iter"]],
     warmup = params[["burnin"]],
     chains = params[["chains"]],
-    cores  = params[["cores"]]
+    cores  = params[["cores"]],
+    open_progress = params[["open_progress"]],
+    show_messages = params[["show_messages"]]    
   )
   # for use with .stan files:
   # fit_stan <- rstan::stan(
