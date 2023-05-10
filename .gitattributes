@@ -1,2 +1,3 @@
-# to change language of repo from C++ to R
-    *.js linguist-language=R
+* linguist-vendored
+*.R linguist-vendored=false
+*.stan linguist-vendored=false
