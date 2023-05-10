@@ -30,7 +30,9 @@
 #'   chains = 2L,
 #'   n_iter = 3000L,
 #'   burnin = 1500L,
-#'   cores = 2L
+#'   cores = 2L,
+#'   open_progress = FALSE,
+#'   show_messages = TRUE  
 #' )
 #' \dontrun{ 
 #' dat_ocs <- run_sim_exp_nocovar(

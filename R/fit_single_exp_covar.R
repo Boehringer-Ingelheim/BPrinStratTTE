@@ -8,7 +8,6 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' d_params_covar <- list(
 #'   n = 1000,        
 #'   nt = 500,       
@@ -48,9 +47,10 @@
 #'   n_iter = 3000,
 #'   burnin = 1500,
 #'   cores = 2,
-#'   open_progress = TRUE,
+#'   open_progress = FALSE,
 #'   show_messages = TRUE   
 #' )
+#' \dontrun{
 #' fit_single <- fit_single_exp_covar(
 #'   data = dat_single_trial,
 #'   params = m_params_covar,

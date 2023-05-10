@@ -1,63 +1,70 @@
-#' Add true values for an exponentially distributed endpoint without consideration of predictors of the intercurrent event
+#' Add true values for an exponentially distributed endpoint with consideration of predictors of the intercurrent event
 #'
 #' @param x ...
 #' @param d_params ...
 #' @param m_params ...
 #'
-#' @return A summary table
+#' @return ...
 #' @export
-#'
+#' 
 #' @examples
-#' d_params_nocovar <- list(
-#'   n = 500L,
-#'   nt = 250L,
-#'   prob_ice = 0.5,
-#'   fu_max = 336L,
-#'   T0T_rate = 0.2,
-#'   T0N_rate = 0.2,
-#'   T1T_rate = 0.15,
+#' d_params_covar <- list(
+#'   n = 1000,        
+#'   nt = 500,       
+#'   prob_X1 = 0.4, 
+#'   prob_ice_X1 = 0.5, 
+#'   prob_ice_X0 = 0.2,
+#'   fu_max = 48*7,       
+#'   T0T_rate = 0.2,     
+#'   T0N_rate = 0.2,     
+#'   T1T_rate = 0.15,     
 #'   T1N_rate = 0.1
+#'  )
+#' dat_single_trial <- sim_dat_one_trial_exp_covar(
+#'   n = d_params_covar[["n"]], 
+#'   nt = d_params_covar[["nt"]],
+#'   prob_X1 = d_params_covar[["prob_X1"]],
+#'   prob_ice_X1 = d_params_covar[["prob_ice_X1"]],
+#'   prob_ice_X0 = d_params_covar[["prob_ice_X0"]],
+#'   fu_max = d_params_covar[["fu_max"]],  
+#'   T0T_rate = d_params_covar[["T0T_rate"]],
+#'   T0N_rate = d_params_covar[["T0N_rate"]],
+#'   T1T_rate = d_params_covar[["T1T_rate"]],
+#'   T1N_rate = d_params_covar[["T1N_rate"]] 
 #' )
-#' dat_single_trial <- sim_dat_one_trial_exp_nocovar(
-#'   n = d_params_nocovar[["n"]], 
-#'   nt = d_params_nocovar[["nt"]],
-#'   prob_ice = d_params_nocovar[["prob_ice"]],
-#'   fu_max = d_params_nocovar[["fu_max"]],  
-#'   T0T_rate = d_params_nocovar[["T0T_rate"]],
-#'   T0N_rate = d_params_nocovar[["T0N_rate"]],
-#'   T1T_rate = d_params_nocovar[["T1T_rate"]],
-#'   T1N_rate = d_params_nocovar[["T1N_rate"]] 
-#' )
-#' m_params_nocovar <- list(
-#'   tg = 48L,
-#'   prior_piT = c(0.5, 0.5),
+#' m_params_covar <- list(
+#'   tg = 48,
+#'   p = 2, 
+#'   prior_delta = matrix(
+#'     c(0, 5, 0, 5),
+#'     nrow = 2, byrow = TRUE),
 #'   prior_0N = c(1.5, 5),
 #'   prior_1N = c(1.5, 5),
 #'   prior_0T = c(1.5, 5),
 #'   prior_1T = c(1.5, 5),
 #'   t_grid =  seq(7, 7 * 48, 7) / 30,
-#'   chains = 2L,
-#'   n_iter = 3000L,
-#'   burnin = 1500L,
-#'   cores = 2L,
+#'   chains = 2,
+#'   n_iter = 3000,
+#'   burnin = 1500,
+#'   cores = 2,
 #'   open_progress = FALSE,
-#'   show_messages = TRUE  
+#'   show_messages = TRUE   
 #' )
 #' \dontrun{
-#' fit_single <- fit_single_exp_nocovar(
+#' fit_single <- fit_single_exp_covar(
 #'   data = dat_single_trial,
-#'   params = m_params_nocovar,
-#'   summarize_fit = TRUE 
+#'   params = m_params_covar,
+#'   summarize_fit = TRUE
 #' )
-#' print(fit_single) 
-#' tab_obs_truth <- true_vals_exp_nocovar(
+#' print(fit_single)
+#' tab_obs_truth <- true_vals_exp_covar(
 #'   x = fit_single,
-#'   d_params = d_params_nocovar,
-#'   m_params = m_params_nocovar
+#'   d_params = d_params_covar,
+#'   m_params = m_params_covar
 #' )
 #' print(tab_obs_truth)
-#' }
-true_vals_exp_nocovar <- function(x, d_params, m_params) {
+#' } 
+true_vals_exp_covar <- function(x, d_params, m_params) {
   # use model summary
   patterns <- c("S_", "lp", "n_eff")
   y <- tibble::as_tibble(x) %>% 
@@ -68,8 +75,11 @@ true_vals_exp_nocovar <- function(x, d_params, m_params) {
     coverage = NA, int_excl1 = NA, int_excl0 = NA,
     rhat_check = NA) 
   # add true proportion of patients with ICE
-  y <- y %>% dplyr::mutate(
-    true_val = ifelse(var=="pi_T", d_params[["prob_ice"]], true_val),
+  y <- y %>% mutate(
+    true_val = ifelse(var=="delta[1]", logit(d_params[["prob_ice_X0"]]), true_val),
+    true_val = ifelse(var=="delta[2]",
+                      logit(d_params[["prob_ice_X1"]])-logit(d_params[["prob_ice_X0"]]),
+                      true_val)
   )
   # add true hazard rate and hazard ratios
   y <- y %>% dplyr::mutate(

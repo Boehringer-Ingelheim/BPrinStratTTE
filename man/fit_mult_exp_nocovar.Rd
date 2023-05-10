@@ -46,7 +46,7 @@ m_params_nocovar <- list(
   n_iter = 3000L,
   burnin = 1500L,
   cores = 2L,
-  open_progress = TRUE,
+  open_progress = FALSE,
   show_messages = TRUE
 )
 \dontrun{

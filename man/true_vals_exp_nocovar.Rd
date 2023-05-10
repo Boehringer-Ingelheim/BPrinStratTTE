@@ -51,7 +51,9 @@ m_params_nocovar <- list(
   chains = 2L,
   n_iter = 3000L,
   burnin = 1500L,
-  cores = 2L
+  cores = 2L,
+  open_progress = FALSE,
+  show_messages = TRUE  
 )
 \dontrun{
 fit_single <- fit_single_exp_nocovar(
@@ -59,6 +61,7 @@ fit_single <- fit_single_exp_nocovar(
   params = m_params_nocovar,
   summarize_fit = TRUE 
 )
+print(fit_single) 
 tab_obs_truth <- true_vals_exp_nocovar(
   x = fit_single,
   d_params = d_params_nocovar,

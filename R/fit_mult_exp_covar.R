@@ -39,7 +39,7 @@
 #'   n_iter = 3000,
 #'   burnin = 1500,
 #'   cores = 2,
-#'   open_progress = TRUE,
+#'   open_progress = FALSE,
 #'   show_messages = TRUE
 #' )
 #' \dontrun{
@@ -51,7 +51,6 @@
 #' lapply(fit_multiple, dim)
 #' head(fit_multiple[[1]])
 #' }
-
 #' 
 fit_mult_exp_covar <- function(
     dat_mult_trials, 
