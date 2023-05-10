@@ -1,6 +1,6 @@
 Package: BPrinStratTTE
 Title: Bayesian principal stratification for time-to-event endpoints
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: c(
   person(
     given = "Christian",
