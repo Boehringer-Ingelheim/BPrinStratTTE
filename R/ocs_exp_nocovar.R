@@ -8,6 +8,7 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' d_params_nocovar <- list(
 #'   n = 500L,
 #'   nt = 250L,
@@ -46,6 +47,7 @@
 #'   m_params = m_params_nocovar
 #' )
 #' print(list_ocs)
+#' }
 ocs_exp_nocovar <- function(multiple_fits, d_params, m_params) {
   # obtain names of parameters to evaluate
   var <- multiple_fits[[1]] %>% select(var)

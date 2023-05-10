@@ -8,6 +8,7 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' d_params_nocovar <- list(
 #'   n = 500L,
 #'   nt = 250L,
@@ -42,6 +43,7 @@
 #' )
 #' lapply(fit_multiple, dim)
 #' head(fit_multiple[[1]])
+#' }
 fit_mult_exp_nocovar <- function(
     dat_mult_trials, 
     params, 

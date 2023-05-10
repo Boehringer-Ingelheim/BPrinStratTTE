@@ -8,6 +8,7 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' d_params_nocovar <- list(
 #'   n = 500L,
 #'   nt = 250L,
@@ -52,7 +53,7 @@
 #'   m_params = m_params_nocovar
 #' )
 #' print(tab_obs_truth)
-#' 
+#' }
 true_vals_exp_nocovar <- function(x, d_params, m_params) {
   # use model summary
   patterns <- c("S_", "lp", "n_eff")

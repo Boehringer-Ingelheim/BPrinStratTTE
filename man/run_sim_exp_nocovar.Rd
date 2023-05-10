@@ -22,6 +22,7 @@ run_sim_exp_nocovar(n_iter, d_params, m_params, seed)
 Run simulation of models without covariates
 }
 \examples{
+\dontrun{
 d_params_nocovar <- list(
   n = 500L,
   nt = 250L,
@@ -52,4 +53,5 @@ list_ocs <- run_sim_exp_nocovar(
   seed = 12
   )
 print(list_ocs)
+}
 }

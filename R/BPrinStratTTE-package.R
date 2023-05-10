@@ -1,6 +1,6 @@
 #' The 'BPrinStratTTE' package.
 #'
-#' @description A DESCRIPTION OF THE PACKAGE
+#' @description Bayesian principal stratification for time-to-event endpoints
 #'
 #' @docType package
 #' @name BPrinStratTTE-package
@@ -26,5 +26,6 @@ NULL
 #' @importFrom magrittr %>%
 #' @importFrom tibble as_tibble
 #' @importFrom tibble tibble
+#' @importFrom stringr str_pad
 ## usethis namespace: end
 NULL

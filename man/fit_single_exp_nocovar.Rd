@@ -20,6 +20,7 @@ fit_single_exp_nocovar(data, params, summarize_fit = TRUE)
 Fit Bayesian principal stratification model for an exponentially distributed endpoint without consideration of predictors of the intercurrent event
 }
 \examples{
+\dontrun{
 d_params_nocovar <- list(
   n = 500L,
   nt = 250L,
@@ -43,10 +44,10 @@ dat_single_trial <- sim_dat_one_trial_exp_nocovar(
 m_params_nocovar <- list(
   tg = 48L,
   prior_piT = c(0.5, 0.5),
-  prior_0N = c(0.01, 0.01),
-  prior_1N = c(0.01, 0.01),
-  prior_0T = c(0.01, 0.01),
-  prior_1T = c(0.01, 0.01),
+  prior_0N = c(1.5, 5),
+  prior_1N = c(1.5, 5),
+  prior_0T = c(1.5, 5),
+  prior_1T = c(1.5, 5),
   t_grid =  seq(7, 7 * 48, 7) / 30,
   chains = 2L,
   n_iter = 3000L,
@@ -59,4 +60,5 @@ fit_single <- fit_single_exp_nocovar(
   summarize_fit = TRUE
 )
 print(fit_single)
+}
 }

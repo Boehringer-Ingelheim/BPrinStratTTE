@@ -8,6 +8,7 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' d_params_nocovar <- list(
 #'   n = 500L,
 #'   nt = 250L,
@@ -31,10 +32,10 @@
 #' m_params_nocovar <- list(
 #'   tg = 48L,
 #'   prior_piT = c(0.5, 0.5),
-#'   prior_0N = c(0.01, 0.01),
-#'   prior_1N = c(0.01, 0.01),
-#'   prior_0T = c(0.01, 0.01),
-#'   prior_1T = c(0.01, 0.01),
+#'   prior_0N = c(1.5, 5),
+#'   prior_1N = c(1.5, 5),
+#'   prior_0T = c(1.5, 5),
+#'   prior_1T = c(1.5, 5),
 #'   t_grid =  seq(7, 7 * 48, 7) / 30,
 #'   chains = 2L,
 #'   n_iter = 3000L,
@@ -47,6 +48,7 @@
 #'   summarize_fit = TRUE
 #' )
 #' print(fit_single)
+#' }
 fit_single_exp_nocovar <- function(data, params, summarize_fit = TRUE) {
   # input data for model
   data_stan <- list(

@@ -6,7 +6,7 @@
 \alias{BPrinStratTTE}
 \title{The 'BPrinStratTTE' package.}
 \description{
-A DESCRIPTION OF THE PACKAGE
+Bayesian principal stratification for time-to-event endpoints
 }
 \references{
 Stan Development Team (2022). RStan: the R interface to Stan. R package version 2.21.5. https://mc-stan.org

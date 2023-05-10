@@ -9,6 +9,7 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' d_params_nocovar <- list(
 #'   n = 500L,
 #'   nt = 250L,
@@ -39,6 +40,7 @@
 #'   seed = 12
 #'   )
 #' print(list_ocs)
+#' }
 run_sim_exp_nocovar <- function(
   n_iter, d_params, m_params, seed
 ) {

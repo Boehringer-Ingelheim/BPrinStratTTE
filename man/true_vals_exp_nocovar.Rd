@@ -20,6 +20,7 @@ A summary table
 Add true values for an exponentially distributed endpoint without consideration of predictors of the intercurrent event
 }
 \examples{
+\dontrun{
 d_params_nocovar <- list(
   n = 500L,
   nt = 250L,
@@ -64,5 +65,5 @@ tab_obs_truth <- true_vals_exp_nocovar(
   m_params = m_params_nocovar
 )
 print(tab_obs_truth)
-
+}
 }
