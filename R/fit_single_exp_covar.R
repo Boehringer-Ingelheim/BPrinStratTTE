@@ -67,7 +67,7 @@
 #'   warmup = 1500,
 #'   cores = 2,
 #'   open_progress = FALSE,
-#'   show_messages = TRUE   
+#'   show_messages = FALSE   
 #' )
 #' \dontrun{
 #' fit_single <- fit_single_exp_covar(

@@ -38,7 +38,6 @@ Fit single model to data from a two-arm trial with an exponentially distributed 
 The data supplied as \code{params} are used either as priors (\code{prior_delta}, \code{prior_0N}, \code{prior_1N}, \code{prior_1T}), to inform the model setup (\code{tg}, \code{p}, \code{t_grid}), or as parameters to \code{rstan::sampling()} which is invoked internally (\code{chains}, \code{n_iter}, \code{warmup}, \code{cores}, \code{open_progress}, \code{show_messages}).
 }
 \examples{
-\dontrun{
 d_params_nocovar <- list(
   n = 500L,
   nt = 250L,
@@ -74,6 +73,7 @@ m_params_nocovar <- list(
   open_progress = FALSE,
   show_messages = TRUE
 )
+\dontrun{
 fit_single <- fit_single_exp_nocovar(
   data = dat_single_trial,
   params = m_params_nocovar,
