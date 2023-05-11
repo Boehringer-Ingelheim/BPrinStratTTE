@@ -29,7 +29,7 @@ fit_single_exp_nocovar(data, params, summarize_fit = TRUE)
 \item{summarize_fit}{Logical, if \code{TRUE} (default), the output is restricted to a summary of results on key parameters over all chains, if \code{FALSE}, the complete \code{stanfit} object is returned.}
 }
 \value{
-\code{tibble()} containing asummary of results on key parameters, or a \code{stanfit} object, depending on \code{summarize_fit}.
+\code{tibble()} containing a summary of results on key parameters, or a \code{stanfit} object, depending on \code{summarize_fit}.
 }
 \description{
 Fit single model to data from a two-arm trial with an exponentially distributed time-to-event endpoint and no predictor of the intercurrent event

@@ -17,7 +17,7 @@
 #'   * `show_messages` Logical value, indicating whether to print the summary of informational messages.
 #' @param summarize_fit Logical, if `TRUE` (default), the output is restricted to a summary of results on key parameters over all chains, if `FALSE`, the complete `stanfit` object is returned.
 #'
-#' @return `tibble()` containing asummary of results on key parameters, or a `stanfit` object, depending on `summarize_fit`.
+#' @return `tibble()` containing a summary of results on key parameters, or a `stanfit` object, depending on `summarize_fit`.
 #' @export
 #'
 #' @details

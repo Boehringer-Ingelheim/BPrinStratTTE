@@ -23,6 +23,7 @@ NULL
 #' @importFrom dplyr filter
 #' @importFrom dplyr mutate
 #' @importFrom purrr map
+#' @importFrom furrr future_map
 #' @importFrom magrittr %>%
 #' @importFrom tibble as_tibble
 #' @importFrom tibble tibble
