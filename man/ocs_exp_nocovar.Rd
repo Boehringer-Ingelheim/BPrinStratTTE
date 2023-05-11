@@ -7,7 +7,7 @@
 ocs_exp_nocovar(multiple_fits, d_params, m_params)
 }
 \arguments{
-\item{multiple_fits}{List of multiple model fits from \code{fit_mult_exp_nocovar}.}
+\item{multiple_fits}{List of model fits from \code{fit_mult_exp_nocovar}.}
 
 \item{d_params}{List of data parameters as used in \code{sim_dat_one_trial_exp_nocovar}.}
 

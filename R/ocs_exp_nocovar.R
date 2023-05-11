@@ -1,6 +1,6 @@
 #' Determine operating characteristics of fits from two-arm trials with an exponentially distributed time-to-event endpoint and no predictor of the intercurrent event
 #'
-#' @param multiple_fits List of multiple model fits from `fit_mult_exp_nocovar`.
+#' @param multiple_fits List of model fits from `fit_mult_exp_nocovar`.
 #' @param d_params List of data parameters as used in `sim_dat_one_trial_exp_nocovar`.
 #' @param m_params List of model parameters as used in `fit_single_exp_nocovar`.
 #'
