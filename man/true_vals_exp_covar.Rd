@@ -57,7 +57,7 @@ m_params_covar <- list(
   t_grid =  seq(7, 7 * 48, 7) / 30,
   chains = 2,
   n_iter = 3000,
-  burnin = 1500,
+  warmup = 1500,
   cores = 2,
   open_progress = FALSE,
   show_messages = TRUE   

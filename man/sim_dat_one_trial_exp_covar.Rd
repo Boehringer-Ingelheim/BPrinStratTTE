@@ -22,7 +22,7 @@ sim_dat_one_trial_exp_covar(
 
 \item{nt}{Positive integer value, number of treated subjects.}
 
-\item{prob_X1}{Numeric value on the interval \eqn{(0,1)}, probability of being at high risk of experiencing the intercurrent event of interest when treated (i.e. the event that determines the principal stratum).}
+\item{prob_X1}{Numeric value on the interval \eqn{(0,1)}, probability of being at high risk of experiencing the intercurrent event of interest when treated (i.e. the event that determines the principal stratum membership).}
 
 \item{prob_ice_X1}{Numeric value on the interval \eqn{(0,1)}, probability of the intercurrent event of interest if treated and at high risk of the intercurrent event.}
 

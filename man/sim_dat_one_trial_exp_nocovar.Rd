@@ -20,7 +20,7 @@ sim_dat_one_trial_exp_nocovar(
 
 \item{nt}{Positive integer value, number of treated subjects.}
 
-\item{prob_ice}{Numeric value on the interval \eqn{(0,1)}, probability of the intercurrent event of interest (i.e. the event that determines the principal stratum).}
+\item{prob_ice}{Numeric value on the interval \eqn{(0,1)}, probability of the intercurrent event of interest (i.e. the event that determines the principal stratum membership).}
 
 \item{fu_max}{Positive integer value, maximum follow-up time in days (administrative censoring assumed afterwards).}
 

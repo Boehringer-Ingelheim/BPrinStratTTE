@@ -2,7 +2,7 @@
 #'
 #' @param n Positive integer value, number of subjects in the trial.
 #' @param nt Positive integer value, number of treated subjects.
-#' @param prob_X1 Numeric value on the interval \eqn{(0,1)}, probability of being at high risk of experiencing the intercurrent event of interest when treated (i.e. the event that determines the principal stratum).
+#' @param prob_X1 Numeric value on the interval \eqn{(0,1)}, probability of being at high risk of experiencing the intercurrent event of interest when treated (i.e. the event that determines the principal stratum membership).
 #' @param prob_ice_X1 Numeric value on the interval \eqn{(0,1)}, probability of the intercurrent event of interest if treated and at high risk of the intercurrent event.
 #' @param prob_ice_X0 Numeric value on the interval \eqn{(0,1)}, probability of the intercurrent event of interest if treated and not at high risk of the intercurrent event. 
 #' @param fu_max Positive integer value, maximum follow-up time in days (administrative censoring assumed afterwards).

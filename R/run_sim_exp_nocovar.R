@@ -31,7 +31,7 @@
 #'   t_grid =  seq(7, 7 * 48, 7) / 30,
 #'   chains = 2L,
 #'   n_iter = 3000L,
-#'   burnin = 1500L,
+#'   warmup = 1500L,
 #'   cores = 2L,
 #'   open_progress = FALSE,
 #'   show_messages = TRUE  
