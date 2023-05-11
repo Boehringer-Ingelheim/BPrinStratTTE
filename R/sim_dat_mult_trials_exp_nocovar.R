@@ -1,10 +1,12 @@
-#' Simulate data from multiple 2-arm trials without predictors of intercurrent events
+#' Simulate data from multiple two-arm trials with an exponentially distributed time-to-event endpoint and no predictor of the intercurrent event
 #'
-#' @param n_iter ...
-#' @param params ...
+#' @param n_iter Positive integer value, number of trials to be simulated.
+#' @param params List of data parameters as used in `sim_dat_one_trial_exp_nocovar`.
 #'
-#' @return A list of tibble containing trial data.
+#' @return A list of length `n_iter`, containing objects of class `tibble()`, each containing one simulated trial dataset.
 #' @export
+#' 
+#' @seealso [sim_dat_mult_trials_exp_covar()]
 #'
 #' @examples
 #' d_params_nocovar <- list(

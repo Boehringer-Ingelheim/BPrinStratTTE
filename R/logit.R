@@ -1,9 +1,11 @@
 #' Logit function
 #'
-#' @param pi ...
+#' @param pi Numeric value on the interval \eqn{[0,1]} (usually a probability).
 #'
-#' @return logit(pi)
+#' @return Numeric value, result of `log(pi/(1-pi))`.
 #' @export
+#' 
+#' @seealso [inv_logit()]
 #'
 #' @examples
 #' # probabilities 

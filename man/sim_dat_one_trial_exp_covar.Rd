@@ -2,7 +2,7 @@
 % Please edit documentation in R/sim_dat_one_trial_exp_covar.R
 \name{sim_dat_one_trial_exp_covar}
 \alias{sim_dat_one_trial_exp_covar}
-\title{Simulate data from a single 2-arm trial with a predictor of the intercurrent events}
+\title{Simulate data from a single two-arm trial with an exponentially distributed time-to-event endpoint and one predictor of the intercurrent event}
 \usage{
 sim_dat_one_trial_exp_covar(
   n,
@@ -18,31 +18,31 @@ sim_dat_one_trial_exp_covar(
 )
 }
 \arguments{
-\item{n}{...}
+\item{n}{Positive integer value, number of subjects in the trial.}
 
-\item{nt}{...}
+\item{nt}{Positive integer value, number of treated subjects.}
 
-\item{prob_X1}{...}
+\item{prob_X1}{Numeric value on the interval \eqn{(0,1)}, probability of being at high risk of experiencing the intercurrent event of interest when treated (i.e. the event that determines the principal stratum).}
 
-\item{prob_ice_X1}{...}
+\item{prob_ice_X1}{Numeric value on the interval \eqn{(0,1)}, probability of the intercurrent event of interest if treated and at high risk of the intercurrent event.}
 
-\item{prob_ice_X0}{...}
+\item{prob_ice_X0}{Numeric value on the interval \eqn{(0,1)}, probability of the intercurrent event of interest if treated and not at high risk of the intercurrent event.}
 
-\item{fu_max}{...}
+\item{fu_max}{Positive integer value, maximum follow-up time in days (administrative censoring assumed afterwards).}
 
-\item{T0T_rate}{...}
+\item{T0T_rate}{Positive numeric value, monthly event rate in control subjects that would develop the intercurrent event if treated.}
 
-\item{T0N_rate}{...}
+\item{T0N_rate}{Positive numeric value, monthly event rate in control subjects that never develop the intercurrent event.}
 
-\item{T1T_rate}{...}
+\item{T1T_rate}{Positive numeric value, monthly event rate in treated subjects that develop the intercurrent event.}
 
-\item{T1N_rate}{...}
+\item{T1N_rate}{Positive numeric value, monthly event rate in treated subjects that never develop the intercurrent event.}
 }
 \value{
 ...
 }
 \description{
-Simulate data from a single 2-arm trial with a predictor of the intercurrent events
+Simulate data from a single two-arm trial with an exponentially distributed time-to-event endpoint and one predictor of the intercurrent event
 }
 \examples{
 d_params_covar <- list(
@@ -72,4 +72,7 @@ dat_single_trial <- sim_dat_one_trial_exp_covar(
 dim(dat_single_trial)
 head(dat_single_trial)
                   
+}
+\seealso{
+\code{\link[=sim_dat_one_trial_exp_nocovar]{sim_dat_one_trial_exp_nocovar()}}
 }

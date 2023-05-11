@@ -2,7 +2,7 @@
 % Please edit documentation in R/fit_mult_exp_nocovar.R
 \name{fit_mult_exp_nocovar}
 \alias{fit_mult_exp_nocovar}
-\title{Fit multiple models without predictors of the intercurrent event}
+\title{Fit multiple models to data from two-arm trials with an exponentially distributed time-to-event endpoint and no predictor of the intercurrent event}
 \usage{
 fit_mult_exp_nocovar(dat_mult_trials, params, seed = 23)
 }
@@ -17,7 +17,7 @@ fit_mult_exp_nocovar(dat_mult_trials, params, seed = 23)
 ...
 }
 \description{
-Fit multiple models without predictors of the intercurrent event
+Fit multiple models to data from two-arm trials with an exponentially distributed time-to-event endpoint and no predictor of the intercurrent event
 }
 \examples{
 d_params_nocovar <- list(
@@ -58,4 +58,7 @@ fit_multiple <- fit_mult_exp_nocovar(
 lapply(fit_multiple, dim)
 head(fit_multiple[[1]])
 }
+}
+\seealso{
+\code{\link[=fit_mult_exp_covar]{fit_mult_exp_covar()}}
 }

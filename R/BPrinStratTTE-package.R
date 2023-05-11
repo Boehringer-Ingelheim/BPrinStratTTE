@@ -1,6 +1,6 @@
 #' The 'BPrinStratTTE' package.
 #'
-#' @description Bayesian principal stratification for time-to-event endpoints
+#' @description Bayesian principal stratification for clincial trials with (exponentially distributed) time-to-event endpoints, with or without consideration of predictors of the intercurrent event
 #'
 #' @docType package
 #' @name BPrinStratTTE-package

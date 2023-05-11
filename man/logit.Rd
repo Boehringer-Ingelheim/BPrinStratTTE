@@ -7,10 +7,10 @@
 logit(pi)
 }
 \arguments{
-\item{pi}{...}
+\item{pi}{Numeric value on the interval \eqn{[0,1]} (usually a probability).}
 }
 \value{
-logit(pi)
+Numeric value, result of \code{log(pi/(1-pi))}.
 }
 \description{
 Logit function
@@ -28,4 +28,7 @@ logit(prob_ICE_risk); (lin_pred2 <- beta1 + beta2*1)
 # inverse logit of linear predictor 
 (inv_logit(lin_pred1)) # prob for X1 = 0
 (inv_logit(lin_pred2)) # prob for X1 = 1
+}
+\seealso{
+\code{\link[=inv_logit]{inv_logit()}}
 }

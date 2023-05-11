@@ -2,24 +2,24 @@
 % Please edit documentation in R/run_sim_exp_covar.R
 \name{run_sim_exp_covar}
 \alias{run_sim_exp_covar}
-\title{Run simulation of models with covariates}
+\title{Run simulation of two-arm trials with an exponentially distributed time-to-event endpoint and one predictor of the intercurrent event}
 \usage{
 run_sim_exp_covar(n_iter, d_params, m_params, seed)
 }
 \arguments{
-\item{n_iter}{...}
+\item{n_iter}{Positive integer value, number of trials to be simulated.}
 
-\item{d_params}{...}
+\item{d_params}{List of data parameters as used in \code{sim_dat_one_trial_exp_nocovar}.}
 
-\item{m_params}{...}
+\item{m_params}{List of model parameters as used in \code{fit_single_exp_nocovar}.}
 
-\item{seed}{...}
+\item{seed}{Numeric value, seed for reproducibility.}
 }
 \value{
-...
+A list of length 3, containing objects call \code{ocs}, \code{d_params}, \code{m_params}, where \code{ocs} is a \code{tibble} containing averaged parameter estimates and operating characteristics, and \code{d_params} and \code{m_params} are the objects supplied to the function.
 }
 \description{
-Run simulation of models with covariates
+Run simulation of two-arm trials with an exponentially distributed time-to-event endpoint and one predictor of the intercurrent event
 }
 \examples{
 d_params_covar <- list(
@@ -62,4 +62,7 @@ dat_ocs <- run_sim_exp_covar(
 print(dat_ocs)
 }
 
+}
+\seealso{
+\code{\link[=run_sim_exp_nocovar]{run_sim_exp_nocovar()}}
 }

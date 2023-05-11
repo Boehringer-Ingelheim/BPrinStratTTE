@@ -1,4 +1,4 @@
-#' Add true values for an exponentially distributed endpoint without consideration of predictors of the intercurrent event
+#' Adding true values to estimates for models with an exponential endpoint and no consideration of predictors of the intercurrent event
 #'
 #' @param x ...
 #' @param d_params ...
@@ -6,7 +6,9 @@
 #'
 #' @return A summary table
 #' @export
-#'
+#' 
+#' @seealso [true_vals_exp_covar()]
+#' 
 #' @examples
 #' d_params_nocovar <- list(
 #'   n = 500L,

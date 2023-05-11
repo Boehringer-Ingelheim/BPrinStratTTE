@@ -1,4 +1,4 @@
-#' Fit Bayesian principal stratification model for an exponentially distributed endpoint without consideration of predictors of the intercurrent event
+#' Fit single model to data from a two-arm trial with an exponentially distributed time-to-event endpoint and no predictor of the intercurrent event
 #'
 #' @param data ...
 #' @param params ...
@@ -6,7 +6,9 @@
 #'
 #' @return ...
 #' @export
-#'
+#' 
+#' @seealso [fit_single_exp_covar()]
+#' 
 #' @examples
 #' \dontrun{
 #' d_params_nocovar <- list(

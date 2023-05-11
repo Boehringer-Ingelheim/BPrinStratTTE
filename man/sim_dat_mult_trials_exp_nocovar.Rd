@@ -2,20 +2,20 @@
 % Please edit documentation in R/sim_dat_mult_trials_exp_nocovar.R
 \name{sim_dat_mult_trials_exp_nocovar}
 \alias{sim_dat_mult_trials_exp_nocovar}
-\title{Simulate data from multiple 2-arm trials without predictors of intercurrent events}
+\title{Simulate data from multiple two-arm trials with an exponentially distributed time-to-event endpoint and no predictor of the intercurrent event}
 \usage{
 sim_dat_mult_trials_exp_nocovar(n_iter, params)
 }
 \arguments{
-\item{n_iter}{...}
+\item{n_iter}{Positive integer value, number of trials to be simulated.}
 
-\item{params}{...}
+\item{params}{List of data parameters as used in \code{sim_dat_one_trial_exp_nocovar}.}
 }
 \value{
-A list of tibble containing trial data.
+A list of length \code{n_iter}, containing objects of class \code{tibble()}, each containing one simulated trial dataset.
 }
 \description{
-Simulate data from multiple 2-arm trials without predictors of intercurrent events
+Simulate data from multiple two-arm trials with an exponentially distributed time-to-event endpoint and no predictor of the intercurrent event
 }
 \examples{
 d_params_nocovar <- list(
@@ -35,4 +35,7 @@ dat_mult_trials <- sim_dat_mult_trials_exp_nocovar(
 lapply(dat_mult_trials, dim)
 head(dat_mult_trials[[1]]) 
 
+}
+\seealso{
+\code{\link[=sim_dat_mult_trials_exp_covar]{sim_dat_mult_trials_exp_covar()}}
 }

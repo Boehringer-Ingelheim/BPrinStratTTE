@@ -1,11 +1,16 @@
-#' Determine operating characteristics of multiple models
+#' Determine operating characteristics of fits from two-arm trials with an exponentially distributed time-to-event endpoint and one predictor of the intercurrent event
 #'
-#' @param multiple_fits ...
-#' @param d_params ... 
-#' @param m_params ... 
+#' @param multiple_fits List of multiple model fits from `fit_mult_exp_covar`.
+#' @param d_params List of data parameters as used in `sim_dat_one_trial_exp_covar`.
+#' @param m_params List of model parameters as used in `fit_single_exp_covar`.
 #'
-#' @return ...
+#' @return A list of length 3, containing objects call `ocs`, `d_params`, `m_params`, where `ocs` is a `tibble` containing averaged parameter estimates and operating characteristics, and `d_params` and `m_params` are the objects supplied to the function.
 #' @export
+#'
+#' @details
+#' This function is used in `run_sim_exp_covar()`, the output of the two functions is the same.
+#' 
+#' @seealso [ocs_exp_nocovar()] and [run_sim_exp_covar()].
 #'
 #' @examples
 #' d_params_covar <- list(

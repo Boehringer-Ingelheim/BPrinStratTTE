@@ -1,12 +1,14 @@
-#' Run simulation of models with covariates
+#' Run simulation of two-arm trials with an exponentially distributed time-to-event endpoint and one predictor of the intercurrent event
 #'
-#' @param n_iter ...
-#' @param d_params ...
-#' @param m_params ...
-#' @param seed ...
+#' @param n_iter Positive integer value, number of trials to be simulated.
+#' @param d_params List of data parameters as used in `sim_dat_one_trial_exp_nocovar`.
+#' @param m_params List of model parameters as used in `fit_single_exp_nocovar`.
+#' @param seed Numeric value, seed for reproducibility.
 #'
-#' @return ...
+#' @return A list of length 3, containing objects call `ocs`, `d_params`, `m_params`, where `ocs` is a `tibble` containing averaged parameter estimates and operating characteristics, and `d_params` and `m_params` are the objects supplied to the function.
 #' @export
+#'
+#' @seealso [run_sim_exp_nocovar()]
 #'
 #' @examples
 #' d_params_covar <- list(

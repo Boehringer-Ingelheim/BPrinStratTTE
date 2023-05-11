@@ -2,7 +2,7 @@
 % Please edit documentation in R/fit_single_exp_covar.R
 \name{fit_single_exp_covar}
 \alias{fit_single_exp_covar}
-\title{Fit Bayesian principal stratification model for an exponentially distributed endpoint with consideration of predictors of the intercurrent event}
+\title{Fit single model to data from a two-arm trial with an exponentially distributed time-to-event endpoint and one predictor of the intercurrent event}
 \usage{
 fit_single_exp_covar(data, params, summarize_fit = TRUE)
 }
@@ -17,7 +17,7 @@ fit_single_exp_covar(data, params, summarize_fit = TRUE)
 ...
 }
 \description{
-Fit Bayesian principal stratification model for an exponentially distributed endpoint with consideration of predictors of the intercurrent event
+Fit single model to data from a two-arm trial with an exponentially distributed time-to-event endpoint and one predictor of the intercurrent event
 }
 \examples{
 d_params_covar <- list(
@@ -70,4 +70,7 @@ fit_single <- fit_single_exp_covar(
 )
 print(fit_single) 
 }
+}
+\seealso{
+\code{\link[=fit_single_exp_nocovar]{fit_single_exp_nocovar()}}
 }

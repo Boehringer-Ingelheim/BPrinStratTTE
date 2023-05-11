@@ -2,22 +2,25 @@
 % Please edit documentation in R/ocs_exp_covar.R
 \name{ocs_exp_covar}
 \alias{ocs_exp_covar}
-\title{Determine operating characteristics of multiple models}
+\title{Determine operating characteristics of fits from two-arm trials with an exponentially distributed time-to-event endpoint and one predictor of the intercurrent event}
 \usage{
 ocs_exp_covar(multiple_fits, d_params, m_params)
 }
 \arguments{
-\item{multiple_fits}{...}
+\item{multiple_fits}{List of multiple model fits from \code{fit_mult_exp_covar}.}
 
-\item{d_params}{...}
+\item{d_params}{List of data parameters as used in \code{sim_dat_one_trial_exp_covar}.}
 
-\item{m_params}{...}
+\item{m_params}{List of model parameters as used in \code{fit_single_exp_covar}.}
 }
 \value{
-...
+A list of length 3, containing objects call \code{ocs}, \code{d_params}, \code{m_params}, where \code{ocs} is a \code{tibble} containing averaged parameter estimates and operating characteristics, and \code{d_params} and \code{m_params} are the objects supplied to the function.
 }
 \description{
-Determine operating characteristics of multiple models
+Determine operating characteristics of fits from two-arm trials with an exponentially distributed time-to-event endpoint and one predictor of the intercurrent event
+}
+\details{
+This function is used in \code{run_sim_exp_covar()}, the output of the two functions is the same.
 }
 \examples{
 d_params_covar <- list(
@@ -68,4 +71,7 @@ list_ocs <- ocs_exp_covar(
 print(list_ocs)
 }
 
+}
+\seealso{
+\code{\link[=ocs_exp_nocovar]{ocs_exp_nocovar()}} and \code{\link[=run_sim_exp_covar]{run_sim_exp_covar()}}.
 }

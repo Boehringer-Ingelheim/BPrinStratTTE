@@ -6,7 +6,7 @@
 \alias{BPrinStratTTE}
 \title{The 'BPrinStratTTE' package.}
 \description{
-Bayesian principal stratification for time-to-event endpoints
+Bayesian principal stratification for clincial trials with (exponentially distributed) time-to-event endpoints, with or without consideration of predictors of the intercurrent event
 }
 \references{
 Stan Development Team (2022). RStan: the R interface to Stan. R package version 2.21.5. https://mc-stan.org

@@ -2,7 +2,7 @@
 % Please edit documentation in R/fit_mult_exp_covar.R
 \name{fit_mult_exp_covar}
 \alias{fit_mult_exp_covar}
-\title{Fit multiple models with predictors of the intercurrent event}
+\title{Fit multiple models to data from two-arm trials with an exponentially distributed time-to-event endpoint and one predictor of the intercurrent event}
 \usage{
 fit_mult_exp_covar(dat_mult_trials, params, seed = 23)
 }
@@ -17,7 +17,7 @@ fit_mult_exp_covar(dat_mult_trials, params, seed = 23)
 ...
 }
 \description{
-Fit multiple models with predictors of the intercurrent event
+Fit multiple models to data from two-arm trials with an exponentially distributed time-to-event endpoint and one predictor of the intercurrent event
 }
 \examples{
 d_params_covar <- list(
@@ -64,4 +64,7 @@ lapply(fit_multiple, dim)
 head(fit_multiple[[1]])
 }
 
+}
+\seealso{
+\code{\link[=fit_mult_exp_nocovar]{fit_mult_exp_nocovar()}}
 }

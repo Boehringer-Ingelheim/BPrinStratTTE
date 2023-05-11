@@ -1,10 +1,16 @@
-#' Inverse logit
+#' Inverse logit function
 #'
-#' @param x ...
+#' @param x Numeric value  (usually a logarithm of odds).
 #'
-#' @return inverse logit of (x)
+#' @return Numeric value on the interval \eqn{[0,1]}, result of `log(pi/(1-pi))`.
+#' @return Numeric value, result of `exp(x)/(1+exp(x))`.
 #' @export
+#' 
+#' @details
+#' The inverse logit function is also known as logistic function.
 #'
+#' @seealso [logit()]
+#' 
 #' @examples
 #' # probabilities 
 #' prob_ICE_base <- 0.3

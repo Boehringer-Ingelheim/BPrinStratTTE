@@ -1,4 +1,4 @@
-#' Fit multiple models with predictors of the intercurrent event
+#' Fit multiple models to data from two-arm trials with an exponentially distributed time-to-event endpoint and one predictor of the intercurrent event
 #'
 #' @param dat_mult_trials ...
 #' @param params ...
@@ -6,6 +6,8 @@
 #'
 #' @return ...
 #' @export
+#' 
+#' @seealso [fit_mult_exp_nocovar()]
 #'
 #' @examples
 #' d_params_covar <- list(

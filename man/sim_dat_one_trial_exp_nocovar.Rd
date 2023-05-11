@@ -2,7 +2,7 @@
 % Please edit documentation in R/sim_dat_one_trial_exp_nocovar.R
 \name{sim_dat_one_trial_exp_nocovar}
 \alias{sim_dat_one_trial_exp_nocovar}
-\title{Simulate data from a single 2-arm trial without predictors of intercurrent events}
+\title{Simulate data from a single two-arm trial with an exponentially distributed time-to-event endpoint and no predictor of the intercurrent event}
 \usage{
 sim_dat_one_trial_exp_nocovar(
   n,
@@ -16,27 +16,27 @@ sim_dat_one_trial_exp_nocovar(
 )
 }
 \arguments{
-\item{n}{Number of subjects in the trial}
+\item{n}{Positive integer value, number of subjects in the trial.}
 
-\item{nt}{Number of treated subjects}
+\item{nt}{Positive integer value, number of treated subjects.}
 
-\item{prob_ice}{Probability of an intercurrent event}
+\item{prob_ice}{Numeric value on the interval \eqn{(0,1)}, probability of the intercurrent event of interest (i.e. the event that determines the principal stratum).}
 
-\item{fu_max}{Maximum follow-up time in days (administrative censoring is assumed afterwards)}
+\item{fu_max}{Positive integer value, maximum follow-up time in days (administrative censoring assumed afterwards).}
 
-\item{T0T_rate}{Monthly event rate in control subjects that would develop the intercurrent event if given treatment}
+\item{T0T_rate}{Positive numeric value, monthly event rate in control subjects that would develop the intercurrent event if treated.}
 
-\item{T0N_rate}{Monthly event rate in control subjects that never develop the intercurrent event}
+\item{T0N_rate}{Positive numeric value, monthly event rate in control subjects that never develop the intercurrent event.}
 
-\item{T1T_rate}{Monthly event rate in treated subjects that develop the intercurrent event}
+\item{T1T_rate}{Positive numeric value, monthly event rate in treated subjects that develop the intercurrent event.}
 
-\item{T1N_rate}{Monthly event rate in treated subjects that never develop the intercurrent event}
+\item{T1N_rate}{Positive numeric value, monthly event rate in treated subjects that never develop the intercurrent event.}
 }
 \value{
-A \code{tibble()}containing an analysis dataset
+A \code{tibble()}containing the trial data for analysis.
 }
 \description{
-Simulate data from a single 2-arm trial without predictors of intercurrent events
+Simulate data from a single two-arm trial with an exponentially distributed time-to-event endpoint and no predictor of the intercurrent event
 }
 \examples{
 d_params_nocovar <- list(
@@ -62,4 +62,7 @@ dat_single_trial <- sim_dat_one_trial_exp_nocovar(
 dim(dat_single_trial)
 head(dat_single_trial)
 
+}
+\seealso{
+\code{\link[=sim_dat_one_trial_exp_covar]{sim_dat_one_trial_exp_covar()}}
 }

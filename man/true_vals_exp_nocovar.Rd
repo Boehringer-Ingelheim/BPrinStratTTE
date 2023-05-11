@@ -2,7 +2,7 @@
 % Please edit documentation in R/true_vals_exp_nocovar.R
 \name{true_vals_exp_nocovar}
 \alias{true_vals_exp_nocovar}
-\title{Add true values for an exponentially distributed endpoint without consideration of predictors of the intercurrent event}
+\title{Adding true values to estimates for models with an exponential endpoint and no consideration of predictors of the intercurrent event}
 \usage{
 true_vals_exp_nocovar(x, d_params, m_params)
 }
@@ -17,7 +17,7 @@ true_vals_exp_nocovar(x, d_params, m_params)
 A summary table
 }
 \description{
-Add true values for an exponentially distributed endpoint without consideration of predictors of the intercurrent event
+Adding true values to estimates for models with an exponential endpoint and no consideration of predictors of the intercurrent event
 }
 \examples{
 d_params_nocovar <- list(
@@ -69,4 +69,7 @@ tab_obs_truth <- true_vals_exp_nocovar(
 )
 print(tab_obs_truth)
 }
+}
+\seealso{
+\code{\link[=true_vals_exp_covar]{true_vals_exp_covar()}}
 }
