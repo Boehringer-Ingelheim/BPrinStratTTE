@@ -37,8 +37,9 @@ Bayesian principal stratification for exponentially distributed time-to-event en
 
 - Principal stratification is an approach to estimate causal effects in partitions of subjects determined by post-treatment events. It was introduced in the biostatistical literature by @Frangakis2002.
 - The ICH E9 (R1) addendum on estimands and sensitivity analysis in clinical trials proposed principal stratification as one approach to deal with intercurrent events in clinical trials (@ICHE9R1Guideline).
-- For recent reviews of applications to clinical trials see @Lipkovich2022 and @Bornkamp2021. So far, experience with respect to clinical trial settings with time-to-event endpoints appears to be particularly limited.
-- Principal stratum membership of subjects is not known with certainty and needs to be estimated. For this package, principal stratum membership is treated as a latent mixture variables, following a proposal by @Imbens1997.
+- For recent reviews of applications to clinical trials see @Lipkovich2022 and @Bornkamp2021. 
+- Principal stratum membership is typically not known with certainty. A Bayesian approach may be particularly suited to deal with this type of uncertainty. Following a proposal by @Imbens1997, principal stratum membership can be treated as a latent mixture variable. 
+- Motivated by scientific questions arising in clinical trials of biologics, in this package the approach by @Imbens1997 is adapted to a specific clinical trial setting with a time-to-event endpoint and the intercurrent event only occuring in the treated group. 
 
 <!-- <font size="3"> -->
 References: <br>

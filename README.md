@@ -39,13 +39,17 @@ trials of biologics.
   deal with intercurrent events in clinical trials (International
   Council for Harmonisation (ICH) (2020)).
 - For recent reviews of applications to clinical trials see Lipkovich et
-  al. (2022) and Bornkamp et al. (2021). So far, experience with respect
-  to clinical trial settings with time-to-event endpoints appears to be
-  particularly limited.
-- Principal stratum membership of subjects is not known with certainty
-  and needs to be estimated. For this package, principal stratum
-  membership is treated as a latent mixture variables, following a
-  proposal by Imbens and Rubin (1997).
+  al. (2022) and Bornkamp et al. (2021).
+- Principal stratum membership is typically not known with certainty. A
+  Bayesian approach may be particularly suited to deal with this type of
+  uncertainty. Following a proposal by Imbens and Rubin (1997),
+  principal stratum membership can be treated as a latent mixture
+  variable.
+- Motivated by scientific questions arising in clinical trials of
+  biologics, in this package the approach by Imbens and Rubin (1997) is
+  adapted to a specific clinical trial setting with a time-to-event
+  endpoint and the intercurrent event only occuring in the treated
+  group.
 
 <!-- <font size="3"> -->
 References: <br>
