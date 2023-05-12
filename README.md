@@ -20,7 +20,7 @@ clinical trials of biologics.
 - Two-arm clinical trials of biologics are considered
   - with an intercurrent event (determining the principal stratum of
     interest) that can only occur in the treated arm (such as the
-    occurence of antidrug antibodies), and
+    development of antidrug antibodies), and
   - with time-to-event endpoint that is assumed to follow an exponential
     distribution.
 - Potential predictors of the intercurrent event can be taken into
