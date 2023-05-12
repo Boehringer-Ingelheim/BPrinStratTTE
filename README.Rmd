@@ -1,5 +1,7 @@
 ---
 output: github_document
+bibliography: "inst/references.bib"
+csl: "inst/american-statistical-association.csl"
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -19,19 +21,34 @@ knitr::opts_chunk$set(
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-Bayesian principal stratification for exponentially distributed time-to-event endpoints to explore potential immunogenicity effects in clinical trials of biologics.
+Bayesian principal stratification for exponentially distributed time-to-event endpoints to explore immunogenicity effects in clinical trials of biologics.
 
 ## Scope
 
-- The package contains functions to fit Bayesian principal stratification models and to perform clinical trial simulations in order to determine operating characteristics for given scenarios.
+- The package contains functions to fit Bayesian principal stratification models and to perform clinical trial simulations to determine operating characteristics for given scenarios.
 - Two-arm clinical trials of biologics are considered 
   - with an intercurrent event (determining the principal stratum of interest) that can only occur in the treated arm (such as the development of antidrug antibodies), and
   - with time-to-event endpoint that is assumed to follow an exponential distribution.
+- Effect estimators are hazard ratios and restricted mean survival times.
 - Potential predictors of the intercurrent event can be taken into account.
+
+
+## Principal stratification methodology
+
+- Principal stratification is an approach to estimate causal effects in partitions of subjects determined by post-treatment events. It was introduced in the biostatistical literature by @Frangakis2002.
+- The ICH E9 (R1) addendum on estimands and sensitivity analysis in clinical trials proposed principal stratification as one approach to deal with intercurrent events in clinical trials (@ICHE9R1Guideline).
+- For recent reviews of applications to clinical trials see @Lipkovich2022 and @Bornkamp2021. So far, experience with respect to clinical trial settings with time-to-event endpoints appears to be particularly limited.
+- Principal stratum membership of subjects is not known with certainty and needs to be estimated. For this package, principal stratum membership is treated as a latent mixture variables, following a proposal by @Imbens1997.
+
+<!-- <font size="3"> -->
+References: <br>
+<div id="refs"></div>
+<!-- </font> -->
+
 
 ## Installation
 
-You can install the `BPrinStratTTE` package from GitHub with: 
+The `BPrinStratTTE` package can be installed from GitHub with: 
 
 ```{r gh-installation, eval=F}
 if (!require("remotes")) {install.packages("remotes")}
