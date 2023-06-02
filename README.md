@@ -21,8 +21,8 @@ trials of biologics.
   - with an intercurrent event (determining the principal stratum of
     interest) that can only occur in the treated arm (such as the
     development of antidrug antibodies), and
-  - with time-to-event endpoint that is assumed to follow an exponential
-    distribution.
+  - with a time-to-event endpoint that is assumed to follow an
+    exponential distribution.
 - Effect estimators are hazard ratios and restricted mean survival
   times.
 - Potential predictors of the intercurrent event can be taken into
