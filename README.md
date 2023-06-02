@@ -111,5 +111,5 @@ The `BPrinStratTTE` package can be installed from GitHub with:
 
 ``` r
 if (!require("remotes")) {install.packages("remotes")}
-remotes::install_github("chstock/BPrinStratTTE")
+remotes::install_github("Boehringer-Ingelheim/BPrinStratTTE")
 ```
