@@ -27,6 +27,8 @@ trials of biologics.
   times.
 - Potential predictors of the intercurrent event can be taken into
   account.
+- More flexible time-to-event distributions (piecewise-exponential and
+  Weibull) will be considered in future versions of the package.
 
 ## Principal stratification methodology
 

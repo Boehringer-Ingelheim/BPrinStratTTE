@@ -31,6 +31,7 @@ Bayesian principal stratification for exponentially distributed time-to-event en
   - with time-to-event endpoint that is assumed to follow an exponential distribution.
 - Effect estimators are hazard ratios and restricted mean survival times.
 - Potential predictors of the intercurrent event can be taken into account.
+- More flexible time-to-event distributions (piecewise-exponential and Weibull) will be considered in future versions of the package.
 
 
 ## Principal stratification methodology
@@ -53,7 +54,7 @@ The `BPrinStratTTE` package can be installed from GitHub with:
 
 ```{r gh-installation, eval=F}
 if (!require("remotes")) {install.packages("remotes")}
-remotes::install_github("chstock/BPrinStratTTE")
+remotes::install_github("Boehringer-Ingelheim/BPrinStratTTE")
 ```
 
 
