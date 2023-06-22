@@ -8,8 +8,7 @@
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-Bayesian principal stratification for exponentially distributed
-time-to-event endpoints to explore immunogenicity effects in clinical
+Bayesian principal stratification for time-to-event endpoints to explore immunogenicity effects in clinical
 trials of biologics.
 
 ## Scope
