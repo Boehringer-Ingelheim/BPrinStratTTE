@@ -1,5 +1,5 @@
 Package: BPrinStratTTE
-Title: Bayesian principal stratification for exponentially distributed time-to-event endpoints to explore potential immunogenicity effects in clinical trials of biologics.
+Title: Bayesian principal stratification for exponentially distributed time-to-event endpoints to explore potential immunogenicity effects in clinical trials of biologics
 Version: 0.0.2
 Authors@R: c(
   person(
