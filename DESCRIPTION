@@ -1,5 +1,5 @@
 Package: BPrinStratTTE
-Title: Bayesian principal stratification for exponentially distributed time-to-event endpoints to explore potential immunogenicity effects in clinical trials of biologics
+Title: Bayesian principal stratification for time-to-event endpoints to explore immunogenicity effects
 Version: 0.0.2
 Authors@R: c(
   person(
@@ -19,7 +19,7 @@ Authors@R: c(
     role = c("cph", "fnd")
   )
   )
-Description: Functions to fit Bayesian principal stratification models for exponentially distributed time-to-event endpoints.
+Description: Functions to fit Bayesian principal stratification models for time-to-event endpoints to explore immunogenicity effects in clinical trials of biologics.
 License: GPL (>= 3)
 Encoding: UTF-8
 URL: https://github.com/Boehringer-Ingelheim/BPrinStratTTE
@@ -34,7 +34,6 @@ Imports:
     purrr,
     Rcpp (>= 0.12.0),
     rstan (>= 2.18.1),
-    rstantools (>= 2.3.1.1),
     stats,
     stringr,
     tibble
@@ -48,4 +47,4 @@ LinkingTo:
     RcppParallel (>= 5.0.1),
     rstan (>= 2.18.1),
     StanHeaders (>= 2.18.0)
-SystemRequirements: GNU make, C++17
+SystemRequirements: GNU make
