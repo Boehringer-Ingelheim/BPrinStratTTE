@@ -1,22 +1,23 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# BPrinStratTTE
+# BPrinStratTTE: Bayesian Principal Stratification for Time-to-Event Endpoints to Explore Immunogenicity Effects
 
 <!-- badges: start -->
 
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-Bayesian principal stratification for time-to-event endpoints to explore immunogenicity effects in clinical
-trials of biologics.
+Functions to fit Bayesian principal stratification models for
+time-to-event endpoints to explore immunogenicity effects in clinical
+trials of biological therapies.
 
 ## Scope
 
 - The package contains functions to fit Bayesian principal
   stratification models and to perform clinical trial simulations to
   determine operating characteristics for given scenarios.
-- Two-arm clinical trials of biologics are considered
+- Two-arm clinical trials of biological therapies are considered
   - with an intercurrent event (determining the principal stratum of
     interest) that can only occur in the treated arm (such as the
     development of antidrug antibodies), and
@@ -47,10 +48,10 @@ trials of biologics.
   principal stratum membership can be treated as a latent mixture
   variable.
 - Motivated by scientific questions arising in clinical trials of
-  biologics, in this package the approach by Imbens and Rubin (1997) is
-  adapted to a specific clinical trial setting with a time-to-event
-  endpoint and the intercurrent event only occuring in the treated
-  group.
+  biological therapies, in this package the approach by Imbens and
+  Rubin (1997) is adapted to a specific clinical trial setting with a
+  time-to-event endpoint and the intercurrent event only occuring in the
+  treated group.
 
 <!-- <font size="3"> -->
 References: <br>
@@ -69,9 +70,9 @@ development</span>,” *Pharm Stat*, 20, 737–751.
 
 <div id="ref-Frangakis2002" class="csl-entry">
 
-Frangakis, C. E., and Rubin, D. B. (2002), “<span
-class="nocase">Principal stratification in causal inference</span>,”
-*Biometrics*, 58, 21–29.
+Frangakis, C. E., and Rubin, D. B. (2002),
+“<span class="nocase">Principal stratification in causal
+inference</span>,” *Biometrics*, 58, 21–29.
 <https://doi.org/10.1111/j.0006-341x.2002.00021.x>.
 
 </div>
@@ -88,8 +89,9 @@ Effects in Randomized Experiments with Noncompliance,” *Ann Stat*, 25,
 
 International Council for Harmonisation (ICH) (2020), “ICH E9 (R1)
 addendum on estimands and sensitivity analysis in clinical trials to the
-guideline on statistical principles for clinical trials.”
-<https://www.ema.europa.eu/en/ich-e9-statistical-principles-clinical-trials>.
+guideline on statistical principles for clinical trials.” <a
+href="&lt;https://database.ich.org/sites/default/files/E9-R1_Step4_Guideline_2019_1203.pdf"
+class="uri">&lt;https://database.ich.org/sites/default/files/E9-R1_Step4_Guideline_2019_1203.pdf</a>.
 
 </div>
 
