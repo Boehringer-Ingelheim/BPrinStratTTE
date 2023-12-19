@@ -19,7 +19,7 @@ Authors@R: c(
     role = c("cph", "fnd")
   )
   )
-Description: Functions to fit Bayesian principal stratification models for time-to-event endpoints to explore immunogenicity effects in clinical trials of biologics.
+Description: Functions to fit Bayesian principal stratification models for time-to-event endpoints to explore immunogenicity effects in clinical trials of biological therapies.
 License: GPL (>= 3)
 Encoding: UTF-8
 URL: https://github.com/Boehringer-Ingelheim/BPrinStratTTE
@@ -47,11 +47,7 @@ LinkingTo:
     RcppParallel (>= 5.0.1),
     rstan (>= 2.18.1),
     StanHeaders (>= 2.18.0)
-<<<<<<< HEAD
-SystemRequirements: GNU make
-=======
 SystemRequirements: GNU make, C++17
 Suggests:
     spelling
 Language: en-US
->>>>>>> 2d3cbfd514e27019ebdb02ac5e43ba35b5fa86de
