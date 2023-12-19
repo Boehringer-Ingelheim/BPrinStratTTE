@@ -1,5 +1,5 @@
 Package: BPrinStratTTE
-Title: Bayesian principal stratification for time-to-event endpoints to explore immunogenicity effects
+Title: Bayesian Principal Stratification for Time-to-Event Endpoints to Explore Immunogenicity Effects
 Version: 0.0.2
 Authors@R: c(
   person(
