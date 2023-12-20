@@ -91,9 +91,8 @@ Effects in Randomized Experiments with Noncompliance,” *Ann Stat*, 25,
 
 International Council for Harmonisation (ICH) (2020), “ICH E9 (R1)
 addendum on estimands and sensitivity analysis in clinical trials to the
-guideline on statistical principles for clinical trials.” <a
-href="&lt;https://database.ich.org/sites/default/files/E9-R1_Step4_Guideline_2019_1203.pdf"
-class="uri">&lt;https://database.ich.org/sites/default/files/E9-R1_Step4_Guideline_2019_1203.pdf</a>.
+guideline on statistical principles for clinical trials.”
+<https://database.ich.org/sites/default/files/E9-R1_Step4_Guideline_2019_1203.pdf>.
 
 </div>
 
