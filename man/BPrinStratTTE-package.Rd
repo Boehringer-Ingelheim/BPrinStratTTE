@@ -6,7 +6,13 @@
 \alias{BPrinStratTTE}
 \title{The 'BPrinStratTTE' package.}
 \description{
-Bayesian principal stratification for clincial trials with (exponentially distributed) time-to-event endpoints, with or without consideration of predictors of the intercurrent event
+Bayesian models to estimate causal effects of biological
+treatments on time-to-event endpoints in clinical trials with principal
+strata defined by the occurence of antidrug antibodies.
+The methodology is based on Frangakis and Rubin (2002)
+\url{doi:10.1111/j.0006-341x.2002.00021.x} and Imbens and Rubin (1997)
+\url{doi:10.1214/aos/1034276631}, and intended to be applied to a
+specific time-to-event setting.#'
 }
 \references{
 Stan Development Team (2022). RStan: the R interface to Stan. R package version 2.21.5. https://mc-stan.org

@@ -73,7 +73,7 @@ m_params_nocovar <- list(
   open_progress = FALSE,
   show_messages = TRUE
 )
-\dontrun{
+\donttest{
 fit_single <- fit_single_exp_nocovar(
   data = dat_single_trial,
   params = m_params_nocovar,

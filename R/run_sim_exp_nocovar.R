@@ -36,7 +36,7 @@
 #'   open_progress = FALSE,
 #'   show_messages = TRUE  
 #' )
-#' \dontrun{ 
+#' \donttest{ 
 #' dat_ocs <- run_sim_exp_nocovar(
 #'   n_iter = 3, 
 #'   d_params = d_params_nocovar, 

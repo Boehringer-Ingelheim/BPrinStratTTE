@@ -54,7 +54,7 @@ m_params_covar <- list(
   open_progress = FALSE,
   show_messages = TRUE
 )
-\dontrun{
+\donttest{
 fit_multiple <- fit_mult_exp_covar(
   dat_mult_trials = dat_mult_trials,
   params = m_params_covar,

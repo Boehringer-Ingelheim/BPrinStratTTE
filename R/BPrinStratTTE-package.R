@@ -1,7 +1,12 @@
 #' The 'BPrinStratTTE' package.
 #'
-#' @description Bayesian principal stratification for clincial trials with (exponentially distributed) time-to-event endpoints, with or without consideration of predictors of the intercurrent event
-#'
+#' @description Bayesian models to estimate causal effects of biological 
+#'     treatments on time-to-event endpoints in clinical trials with principal
+#'     strata defined by the occurence of antidrug antibodies. 
+#'     The methodology is based on Frangakis and Rubin (2002) 
+#'     <doi:10.1111/j.0006-341x.2002.00021.x> and Imbens and Rubin (1997)
+#'     <doi:10.1214/aos/1034276631>, and intended to be applied to a 
+#'     specific time-to-event setting.#'
 #' @docType package
 #' @name BPrinStratTTE-package
 #' @aliases BPrinStratTTE
