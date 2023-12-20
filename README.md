@@ -1,16 +1,16 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# BPrinStratTTE: Bayesian Principal Stratification for Time-to-Event Endpoints to Explore Immunogenicity Effects
+# BPrinStratTTE: Causal Effects in Principal Strata Defined by Antidrug Antibodies
 
 <!-- badges: start -->
 
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-Functions to fit Bayesian principal stratification models for
-time-to-event endpoints to explore immunogenicity effects in clinical
-trials of biological therapies.
+Bayesian models to estimate causal effects of biological treatments on
+time-to-event endpoints in clinical trials with principal strata defined
+by the occurence of antidrug antibodies.
 
 ## Scope
 
@@ -27,6 +27,8 @@ trials of biological therapies.
   times.
 - Potential predictors of the intercurrent event can be taken into
   account.
+- The models are fitted by Monte Carlo Markov Chain (MCMC) sampling,
+  they are coded in [Stan](https://mc-stan.org/) and pre-compiled.
 - More flexible time-to-event distributions (piecewise-exponential and
   Weibull) will be considered in future versions of the package.
 
@@ -40,8 +42,6 @@ trials of biological therapies.
   clinical trials proposed principal stratification as one approach to
   deal with intercurrent events in clinical trials (International
   Council for Harmonisation (ICH) (2020)).
-- For recent reviews of applications to clinical trials see Lipkovich et
-  al. (2022) and Bornkamp et al. (2021).
 - Principal stratum membership is typically not known with certainty. A
   Bayesian approach may be particularly suited to deal with this type of
   uncertainty. Following a proposal by Imbens and Rubin (1997),
@@ -52,6 +52,8 @@ trials of biological therapies.
   Rubin (1997) is adapted to a specific clinical trial setting with a
   time-to-event endpoint and the intercurrent event only occuring in the
   treated group.
+- For recent reviews of applications to clinical trials see Lipkovich et
+  al. (2022) and Bornkamp et al. (2021).
 
 <!-- <font size="3"> -->
 References: <br>

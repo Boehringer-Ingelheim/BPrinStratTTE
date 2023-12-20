@@ -1,5 +1,5 @@
 Package: BPrinStratTTE
-Title: Bayesian Principal Stratification for Time-to-Event Endpoints to Explore Immunogenicity Effects
+Title: Causal Effects in Principal Strata Defined by Antidrug Antibodies
 Version: 0.0.2
 Authors@R: c(
   person(
@@ -19,7 +19,13 @@ Authors@R: c(
     role = c("cph", "fnd")
   )
   )
-Description: Functions to fit Bayesian principal stratification models for time-to-event endpoints to explore immunogenicity effects in clinical trials of biological therapies.
+Description: Bayesian models to estimate causal effects of biological 
+    treatments on time-to-event endpoints in clinical trials with principal
+    strata defined by the occurence of antidrug antibodies. 
+    The methodology is based on Frangakis and Rubin (2002) 
+    <doi:10.1111/j.0006-341x.2002.00021.x> and Imbens and Rubin (1997)
+    <doi:10.1214/aos/1034276631>, and intended to be applied here to a 
+    specific time-to-event setting.
 License: GPL (>= 3)
 Encoding: UTF-8
 URL: https://github.com/Boehringer-Ingelheim/BPrinStratTTE
