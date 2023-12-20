@@ -1,10 +1,10 @@
 #' Adding true values to estimates for models with an exponential endpoint and consideration of predictors of the intercurrent event
 #' 
-#' @param x ...
-#' @param d_params ...
-#' @param m_params ...
+#' @param x Model object as returned by `fit_single_exp_covar()`.
+#' @param d_params List of data parameters as used in `fit_single_exp_covar()`.
+#' @param m_params List of model parameters as used in `fit_single_exp_covar()`.
 #'
-#' @return ...
+#' @return A summary table (tibble) with parameter estimates, true values and differences.
 #' @export
 #' 
 #' @seealso [true_vals_exp_nocovar()]

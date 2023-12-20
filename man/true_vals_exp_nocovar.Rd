@@ -7,14 +7,14 @@
 true_vals_exp_nocovar(x, d_params, m_params)
 }
 \arguments{
-\item{x}{...}
+\item{x}{Model object as returned by \code{fit_single_exp_nocovar()}.}
 
-\item{d_params}{...}
+\item{d_params}{List of data parameters as used in \code{fit_single_exp_nocovar()}.}
 
-\item{m_params}{...}
+\item{m_params}{List of model parameters as used in \code{fit_single_exp_nocovar()}.}
 }
 \value{
-A summary table
+A summary table (tibble) with parameter estimates, true values and differences.
 }
 \description{
 Adding true values to estimates for models with an exponential endpoint and no consideration of predictors of the intercurrent event
