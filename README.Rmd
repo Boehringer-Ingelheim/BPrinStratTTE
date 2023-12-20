@@ -19,6 +19,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![CRAN status](https://www.r-pkg.org/badges/version/BPrinStratTTE)](https://CRAN.R-project.org/package=BPrinStratTTE)
 <!-- badges: end -->
 
 Bayesian models to estimate causal effects of biological treatments on time-to-event endpoints in clinical trials with principal strata defined by the occurrence of antidrug antibodies.
@@ -52,12 +53,17 @@ References: <br>
 
 ## Installation
 
-The `BPrinStratTTE` package can be installed from GitHub with: 
+The current stable version of the package can be installed from CRAN with:
 
-```{r gh-installation, eval=F}
+```{r cran-installation, eval=FALSE}
+install.packages("BPrinStratTTE")
+```
+
+The development version of the package can be installed from GitHub with: 
+
+```{r gh-installation, eval=FALSE}
 if (!require("remotes")) {install.packages("remotes")}
 remotes::install_github("Boehringer-Ingelheim/BPrinStratTTE")
 ```
-
 
 
