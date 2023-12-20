@@ -10,7 +10,7 @@
 
 Bayesian models to estimate causal effects of biological treatments on
 time-to-event endpoints in clinical trials with principal strata defined
-by the occurence of antidrug antibodies.
+by the occurrence of antidrug antibodies.
 
 ## Scope
 
@@ -28,7 +28,7 @@ by the occurence of antidrug antibodies.
 - Potential predictors of the intercurrent event can be taken into
   account.
 - The models are fitted by Monte Carlo Markov Chain (MCMC) sampling,
-  they are coded in [Stan](https://mc-stan.org/) and pre-compiled.
+  they are coded in [Stan](https://mc-stan.org/) and precompiled.
 - More flexible time-to-event distributions (piecewise-exponential and
   Weibull) will be considered in future versions of the package.
 
@@ -50,8 +50,8 @@ by the occurence of antidrug antibodies.
 - Motivated by scientific questions arising in clinical trials of
   biological therapies, in this package the approach by Imbens and
   Rubin (1997) is adapted to a specific clinical trial setting with a
-  time-to-event endpoint and the intercurrent event only occuring in the
-  treated group.
+  time-to-event endpoint and the intercurrent event only occurring in
+  the treated group.
 - For recent reviews of applications to clinical trials see Lipkovich et
   al. (2022) and Bornkamp et al. (2021).
 

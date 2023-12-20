@@ -4,7 +4,7 @@
 #' @param d_params List of data parameters as used in `fit_single_exp_covar()`.
 #' @param m_params List of model parameters as used in `fit_single_exp_covar()`.
 #'
-#' @return A summary table (tibble) with parameter estimates, true values and differences.
+#' @return A summary table with parameter estimates, true values and differences.
 #' @export
 #' 
 #' @seealso [true_vals_exp_nocovar()]

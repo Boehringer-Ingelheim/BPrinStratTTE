@@ -14,7 +14,7 @@ true_vals_exp_covar(x, d_params, m_params)
 \item{m_params}{List of model parameters as used in \code{fit_single_exp_covar()}.}
 }
 \value{
-A summary table (tibble) with parameter estimates, true values and differences.
+A summary table with parameter estimates, true values and differences.
 }
 \description{
 Adding true values to estimates for models with an exponential endpoint and consideration of predictors of the intercurrent event

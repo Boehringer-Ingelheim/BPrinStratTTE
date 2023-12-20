@@ -8,7 +8,7 @@
 \description{
 Bayesian models to estimate causal effects of biological
 treatments on time-to-event endpoints in clinical trials with principal
-strata defined by the occurence of antidrug antibodies.
+strata defined by the occurrence of antidrug antibodies.
 The methodology is based on Frangakis and Rubin (2002)
 \url{doi:10.1111/j.0006-341x.2002.00021.x} and Imbens and Rubin (1997)
 \url{doi:10.1214/aos/1034276631}, and intended to be applied to a
