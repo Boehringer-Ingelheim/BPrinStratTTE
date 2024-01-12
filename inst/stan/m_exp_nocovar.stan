@@ -7,8 +7,8 @@ data {
   // --- Individual level data
   array[n] int<lower=0, upper=1>    Z;       // treatment assignment
   array[n] int<lower=0, upper=1>    S;       // observed ICE development
-  array[n] real<lower=0>            TIME;    // time to event (endpoint)
-  array[n] int<lower=0, upper=1>    EVENT;   // event yes or no
+  array[n] real<lower=0>            TIME;    // time to event
+  array[n] int<lower=0, upper=1>    EVENT;   // event
 
   // --- Prior parameters
   array[2] real<lower=0>            prior_piT;
