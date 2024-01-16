@@ -42,7 +42,8 @@ Imports:
     rstan (>= 2.18.1),
     stats,
     stringr,
-    tibble
+    tibble,
+    rstantools
 Biarch: true
 Depends: 
     R (>= 3.4.0)
