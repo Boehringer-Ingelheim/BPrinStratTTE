@@ -17,3 +17,25 @@ specific time-to-event setting.#'
 \references{
 Stan Development Team (2022). RStan: the R interface to Stan. R package version 2.21.5. https://mc-stan.org
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/Boehringer-Ingelheim/BPrinStratTTE}
+  \item Report bugs at \url{https://github.com/Boehringer-Ingelheim/BPrinStratTTE/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Christian Stock \email{christian.stock@boehringer-ingelheim.com} (\href{https://orcid.org/0000-0002-3493-3234}{ORCID})
+
+Authors:
+\itemize{
+  \item Emma Torrini
+}
+
+Other contributors:
+\itemize{
+  \item Boehringer Ingelheim Pharma GmbH & Co. KG [copyright holder, funder]
+}
+
+}
