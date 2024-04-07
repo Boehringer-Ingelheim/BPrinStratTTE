@@ -1,7 +1,8 @@
-## BPrinStratTTE 0.0.5
+## BPrinStratTTE 0.0.6
 
 * Updated deprecated syntax in Stan models (thanks to Andrew Johns)
-* Modifications to compiler flags
+* Modified compiler flags
+* Added package website
 
 ## BPrinStratTTE 0.0.2
 
