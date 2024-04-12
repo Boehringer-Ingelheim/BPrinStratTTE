@@ -6,7 +6,7 @@
 #' @param prob_ice_X1 Numeric value on the interval \eqn{(0,1)}, probability of the intercurrent event of interest if treated and at high risk of the intercurrent event.
 #' @param prob_ice_X0 Numeric value on the interval \eqn{(0,1)}, probability of the intercurrent event of interest if treated and not at high risk of the intercurrent event. 
 #' @param fu_max Positive integer value, maximum follow-up time in days (administrative censoring assumed afterwards).
-#' @param prop_cens Numeric value on the interval \eqn{(0,1)}, proportion of uniformly censored patients. 
+#' @param prop_cens Numeric value on the interval \eqn{[0,1)}, proportion of uniformly censored patients (default is 0). 
 #' @param T0T_rate Positive numeric value, monthly event rate in control subjects that would develop the intercurrent event if treated.
 #' @param T0N_rate Positive numeric value, monthly event rate in control subjects that never develop the intercurrent event.
 #' @param T1T_rate Positive numeric value, monthly event rate in treated subjects that develop the intercurrent event.
@@ -25,8 +25,8 @@
 #'   prob_ice_X1 = 0.5, 
 #'   prob_ice_X0 = 0.2,
 #'   fu_max = 48*7, 
-#'   prop_cens = 0.15,      
-#'   T0T_rate = 0.2,     
+#'   prop_cens = 0.15,
+#'   T0T_rate = 0.2,      
 #'   T0N_rate = 0.2,     
 #'   T1T_rate = 0.15,     
 #'   T1N_rate = 0.1
@@ -38,7 +38,7 @@
 #'   prob_ice_X1 = d_params_covar[["prob_ice_X1"]],
 #'   prob_ice_X0 = d_params_covar[["prob_ice_X0"]],
 #'   fu_max = d_params_covar[["fu_max"]],
-#'   prop_cens = d_params_covar[["prop_cens]],  
+#'   prop_cens = d_params_covar[["prop_cens"]],  
 #'   T0T_rate = d_params_covar[["T0T_rate"]],
 #'   T0N_rate = d_params_covar[["T0N_rate"]],
 #'   T1T_rate = d_params_covar[["T1T_rate"]],
@@ -54,7 +54,7 @@ sim_dat_one_trial_exp_covar <- function(
     prob_ice_X1,   # probability of intercurrent event for X=1
     prob_ice_X0,   # probability of intercurrent event for X=0
     fu_max,        # maximum follow-up (days)
-    prop_cens,     # proportion of censored patients
+    prop_cens = 0, # proportion of censored patients
     T0T_rate,      # monthly event rate in controls TD
     T0N_rate,      # monthly event rate in controls ND
     T1T_rate,      # monthly event rate in treated TD
@@ -75,10 +75,16 @@ sim_dat_one_trial_exp_covar <- function(
   S <- G
   S[Z==0L] <- 0L
   # censoring
-  pat_cens <- sort(sample(1:n, size = round(n*prop_cens, 0)))
-  unif_cens <- runif(n = length(pat_cens), min = 1, max = fu_max)
-  cens <- rep(fu_max, n)
-  cens[pat_cens] <- unif_cens
+  n_cens <- n * prop_cens
+  if (n_cens > 0) {
+    pat_cens <- sample(x = 1:n, size = n_cens) |> sort()
+    unif_cens <- runif(n = length(pat_cens), min = 1, max = fu_max)
+    cens <- rep(fu_max, n)
+    cens[pat_cens] <- unif_cens
+  } 
+  if (n_cens == 0) {
+    cens <- rep(fu_max, n)
+  }
   # time to event endpoint data by principal stratum
   T0T <- rexp(n = n, rate = T0T_rate) * 30
   T0N <- rexp(n = n, rate = T0N_rate) * 30
