@@ -1,6 +1,6 @@
 Package: BPrinStratTTE
 Title: Causal Effects in Principal Strata Defined by Antidrug Antibodies
-Version: 0.0.6
+Version: 0.0.7
 Authors@R: c(
   person(
     given = "Christian",
