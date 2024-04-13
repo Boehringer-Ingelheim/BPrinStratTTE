@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">BPrinStratTTE</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.6</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.7</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,6 +56,7 @@
 <span>  <span class="va">nt</span>,</span>
 <span>  <span class="va">prob_ice</span>,</span>
 <span>  <span class="va">fu_max</span>,</span>
+<span>  prop_cens <span class="op">=</span> <span class="fl">0</span>,</span>
 <span>  <span class="va">T0T_rate</span>,</span>
 <span>  <span class="va">T0N_rate</span>,</span>
 <span>  <span class="va">T1T_rate</span>,</span>
@@ -79,6 +80,10 @@
 
 <dt>fu_max</dt>
 <dd><p>Positive integer value, maximum follow-up time in days (administrative censoring assumed afterwards).</p></dd>
+
+
+<dt>prop_cens</dt>
+<dd><p>Numeric value on the interval \([0,1)\), proportion of uniformly censored patients (default is 0).</p></dd>
 
 
 <dt>T0T_rate</dt>
@@ -115,6 +120,7 @@
 <span>  nt <span class="op">=</span> <span class="fl">250L</span>,</span>
 <span>  prob_ice <span class="op">=</span> <span class="fl">0.5</span>,</span>
 <span>  fu_max <span class="op">=</span> <span class="fl">336L</span>,</span>
+<span>  prop_cens <span class="op">=</span> <span class="fl">0.15</span>,</span>
 <span>  T0T_rate <span class="op">=</span> <span class="fl">0.2</span>,</span>
 <span>  T0N_rate <span class="op">=</span> <span class="fl">0.2</span>,</span>
 <span>  T1T_rate <span class="op">=</span> <span class="fl">0.15</span>,</span>
@@ -124,7 +130,8 @@
 <span>  n <span class="op">=</span> <span class="va">d_params_nocovar</span><span class="op">[[</span><span class="st">"n"</span><span class="op">]</span><span class="op">]</span>, </span>
 <span>  nt <span class="op">=</span> <span class="va">d_params_nocovar</span><span class="op">[[</span><span class="st">"nt"</span><span class="op">]</span><span class="op">]</span>,</span>
 <span>  prob_ice <span class="op">=</span> <span class="va">d_params_nocovar</span><span class="op">[[</span><span class="st">"prob_ice"</span><span class="op">]</span><span class="op">]</span>,</span>
-<span>  fu_max <span class="op">=</span> <span class="va">d_params_nocovar</span><span class="op">[[</span><span class="st">"fu_max"</span><span class="op">]</span><span class="op">]</span>,  </span>
+<span>  fu_max <span class="op">=</span> <span class="va">d_params_nocovar</span><span class="op">[[</span><span class="st">"fu_max"</span><span class="op">]</span><span class="op">]</span>,</span>
+<span>  prop_cens <span class="op">=</span> <span class="va">d_params_nocovar</span><span class="op">[[</span><span class="st">"prop_cens"</span><span class="op">]</span><span class="op">]</span>,  </span>
 <span>  T0T_rate <span class="op">=</span> <span class="va">d_params_nocovar</span><span class="op">[[</span><span class="st">"T0T_rate"</span><span class="op">]</span><span class="op">]</span>,</span>
 <span>  T0N_rate <span class="op">=</span> <span class="va">d_params_nocovar</span><span class="op">[[</span><span class="st">"T0N_rate"</span><span class="op">]</span><span class="op">]</span>,</span>
 <span>  T1T_rate <span class="op">=</span> <span class="va">d_params_nocovar</span><span class="op">[[</span><span class="st">"T1T_rate"</span><span class="op">]</span><span class="op">]</span>,</span>

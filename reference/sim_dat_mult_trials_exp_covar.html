@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">BPrinStratTTE</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.6</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.7</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,14 +83,15 @@
 <span>  prob_X1 <span class="op">=</span> <span class="fl">0.4</span>, </span>
 <span>  prob_ice_X1 <span class="op">=</span> <span class="fl">0.5</span>, </span>
 <span>  prob_ice_X0 <span class="op">=</span> <span class="fl">0.2</span>,</span>
-<span>  fu_max <span class="op">=</span> <span class="fl">48</span><span class="op">*</span><span class="fl">7</span>,       </span>
+<span>  fu_max <span class="op">=</span> <span class="fl">336L</span>,   </span>
+<span>  prop_cens <span class="op">=</span> <span class="fl">0.15</span>,    </span>
 <span>  T0T_rate <span class="op">=</span> <span class="fl">0.2</span>,     </span>
 <span>  T0N_rate <span class="op">=</span> <span class="fl">0.2</span>,     </span>
 <span>  T1T_rate <span class="op">=</span> <span class="fl">0.15</span>,     </span>
 <span>  T1N_rate <span class="op">=</span> <span class="fl">0.1</span></span>
 <span> <span class="op">)</span></span>
 <span><span class="va">dat_mult_trials</span> <span class="op">&lt;-</span> <span class="fu">sim_dat_mult_trials_exp_covar</span><span class="op">(</span></span>
-<span>  n_iter <span class="op">=</span> <span class="fl">3</span>,</span>
+<span>  n_iter <span class="op">=</span> <span class="fl">3L</span>,</span>
 <span>  params <span class="op">=</span> <span class="va">d_params_covar</span> </span>
 <span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">lapply</a></span><span class="op">(</span><span class="va">dat_mult_trials</span>, <span class="va">dim</span><span class="op">)</span></span>
